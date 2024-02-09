@@ -25,8 +25,20 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\img\\City-hall-bldg.jpg",
+      "PackagePath": "staticwebassets\\img\\City-hall-bldg.jpg"
+    },
+    {
       "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\img\\Webinar-rafiki.png",
       "PackagePath": "staticwebassets\\img\\Webinar-rafiki.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\img\\bx-check.svg",
+      "PackagePath": "staticwebassets\\img\\bx-check.svg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\img\\cgpp-2.png",
+      "PackagePath": "staticwebassets\\img\\cgpp-2.png"
     },
     {
       "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\img\\engines-bro.png",

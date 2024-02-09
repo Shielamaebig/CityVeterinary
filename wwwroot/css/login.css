@@ -2,7 +2,7 @@ body {
     color: #000;
     overflow-x: hidden;
     height: 100vh;
-    background-image: linear-gradient(4deg, rgba(48, 87, 243, 0.5) 30%, rgba(81,112,255,0.3) 45%, rgba(26, 94, 229, 0.3) 100%), url("../img/City-hall-bldg.jpg");
+    background-image: linear-gradient(4deg, rgba(48, 87, 243, 0.484) 100%, rgba(81, 113, 255, 0.454) 100%, rgba(26, 94, 229, 0.415) 100%), url("../img/wave.svg");
     background-repeat: no-repeat;
     align-items: center;
     display: flex;
@@ -55,7 +55,7 @@ button:focus {
 }
 .card2 {
     width: 50%;
-    background-color: #3acbe8f6;
+    background-color: #B697F5;
 }
 
 #logo {
@@ -64,7 +64,7 @@ button:focus {
 }
 
 .heading {
-    margin-bottom: 60px !important
+    margin-bottom: 30px !important
 }
 
 ::placeholder {
@@ -87,7 +87,7 @@ button:focus {
 
 .msg-info {
     padding-left: 15px;
-    margin-bottom: 30px
+    margin-bottom: 20px
 }
 
 
@@ -160,16 +160,15 @@ html, body {
   }
   
   .dog{
+    padding-top: 50px;
     align-items: center;
-    background-color: #d4e6ff;
     display: flex;
     justify-content: center;    
   }
   .sausage-dog-animation {
-    top: -30%;
-    left: -90%;
+    top: 0;
+    left: 0;
     justify-content: center;  
-    position: absolute;
     height: 15rem;
     max-height: 80vh;
     max-width: 80vw;
