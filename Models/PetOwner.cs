@@ -1,0 +1,19 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace CityVeterinary.Models
+{
+    public class PetOwner
+    {
+        public int Id { get; set; }
+        public Guid PetOwnerGuid { get; set; }
+        public string? FirstName { get; set; }
+        public string? MiddleName { get; set; }
+        public string? LastName { get; set; }
+        public string? ContactNumber { get; set; }
+        public int BaranggayId { get; set; }
+        public virtual Baranggay? Baranggay { get; set; }
+    }
+}
