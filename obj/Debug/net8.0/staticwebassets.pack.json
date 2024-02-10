@@ -53,6 +53,10 @@
       "PackagePath": "staticwebassets\\img\\s.png"
     },
     {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\img\\wave.svg",
+      "PackagePath": "staticwebassets\\img\\wave.svg"
+    },
+    {
       "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\js\\fastbootstrap.min.js",
       "PackagePath": "staticwebassets\\js\\fastbootstrap.min.js"
     },

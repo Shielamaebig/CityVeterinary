@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YJzb2GZ88lWHhsTu9lWc2jsCFU8itSd5XYUmDuIfDyY=",
+  "Hash": "c7sdwsWOiyIyqL6C7CS6gY0QTBQ6XZn3jRJzR2HFSYM=",
   "Source": "CityVeterinary",
   "BasePath": "_content/CityVeterinary",
   "Mode": "Default",
@@ -262,6 +262,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\s.png"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\img\\wave.svg",
+      "SourceId": "CityVeterinary",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\",
+      "BasePath": "_content/CityVeterinary",
+      "RelativePath": "img/wave.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\wave.svg"
     },
     {
       "Identity": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\img\\Webinar-rafiki.png",
