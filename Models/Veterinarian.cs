@@ -8,7 +8,7 @@ namespace CityVeterinary.Models
     public class Veterinarian
     {
         public int Id { get; set; }
-        public string? Vaccinator { get; set; }
+        public string? VetName { get; set; }
         public string? DateAdded { get; set; }
     }
 }

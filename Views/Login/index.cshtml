@@ -25,7 +25,7 @@
                             </div>
 
                             <div class="form-check mt-1 align-self-center">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                <input class="form-check-input" type="checkbox" value="" id="showPassword" />
                                 <label class="form-check-label ms-2 mt-1" for="flexCheckDefault">
                                     Show Password
                                 </label>
@@ -265,10 +265,76 @@ z" />
         </div>
     </div>
 </div>
+
+
+<div class="modal fade" tabindex="-1" id="loginLoader" aria-labelledby="exampleModalLabel" aria-hidden="true"
+    data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body h-100">
+                <div class="justify-content-center">
+                    <div class="text-center">
+                        <img src="/img/access.png" width="400" height="500" class="img-fluid">
+                    </div>
+                    <div class="loader mx-7">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                    <div class="spinnerContainer mx-6">
+                        <div class="loader2">
+                            <p>loading</p>
+                            <div class="words">
+                                <span class="word">posts</span>
+                                <span class="word">images</span>
+                                <span class="word">Datas</span>
+                                <span class="word">hashtags</span>
+                                <span class="word">posts</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" tabindex="-1" id="loginLoaderdenied" aria-labelledby="exampleModalLabel" aria-hidden="true"
+    data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <a href="/login">
+                <div class="modal-body h-100">
+                    <div class="justify-content-center text-center">
+                        <img src="/img/AccesDenied.png" width="500" height="500" class="img-fluid">
+                        <h3 class="text-danger fw-bold">Please! Try Again!</h3>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
 @section scripts
 {
     <script>
+        document.body.style.zoom = "80%";
+        document.getElementById('showPassword').onclick = function () {
+            if (this.checked) {
+                document.getElementById('password').type = "text";
+            } else {
+                document.getElementById('password').type = "password";
+            }
+        };
         $(document).ready(function () {
+            if (localStorage.getItem("token") === null) {
+
+            }
+            else {
+                window.location.href = "/Home";
+            }
             $('#btnLogin').click(function (e) {
                 // get role
                 e.preventDefault();
@@ -286,7 +352,6 @@ z" />
                     type: 'POST',
                     data: data,
                     success: function (data) {
-                        console.log('ok');
                         localStorage.setItem('token', data);
                         var base64Url = data.split('.')[1];
                         var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
@@ -296,10 +361,14 @@ z" />
                         var raw = JSON.parse(jsonPayload);
                         localStorage.setItem('role', raw.display_role);
                         localStorage.setItem('name', raw.display_name);
-                        console.log('ok');
+                        setTimeout(function () {
+                            window.location.href = "/Home";
+                        }, 5100);
+                        $('#loginLoader').modal('show');
+
                     },
                     error: function (data) {
-                        console.log('error');
+                        $('#loginLoaderdenied').modal('show');
 
                     }
                 });

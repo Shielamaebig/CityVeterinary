@@ -8,7 +8,6 @@ namespace CityVeterinary.Models
     public class PetInformation
     {
         public int Id { get; set; }
-        public Guid PetInfoGuid { get; set; }
         public virtual PetOwner? PetOwner { get; set; }
         public int PetOwnerId { get; set; }
         public virtual PetType? PetType { get; set; }

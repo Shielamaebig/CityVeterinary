@@ -5,12 +5,24 @@
       "PackagePath": "staticwebassets\\CityVeterinary.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\css\\dataTables.bootstrap5.css",
+      "PackagePath": "staticwebassets\\css\\dataTables.bootstrap5.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\css\\dataTables.dataTables.min.css",
+      "PackagePath": "staticwebassets\\css\\dataTables.dataTables.min.css"
+    },
+    {
       "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\css\\fastbootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\fastbootstrap.min.css"
     },
     {
       "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\css\\login.css",
       "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\css\\mermaid.min.css",
+      "PackagePath": "staticwebassets\\css\\mermaid.min.css"
     },
     {
       "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\css\\site.css",
@@ -25,12 +37,20 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\img\\AccesDenied.png",
+      "PackagePath": "staticwebassets\\img\\AccesDenied.png"
+    },
+    {
       "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\img\\City-hall-bldg.jpg",
       "PackagePath": "staticwebassets\\img\\City-hall-bldg.jpg"
     },
     {
       "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\img\\Webinar-rafiki.png",
       "PackagePath": "staticwebassets\\img\\Webinar-rafiki.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\img\\access.png",
+      "PackagePath": "staticwebassets\\img\\access.png"
     },
     {
       "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\img\\bx-check.svg",
@@ -57,8 +77,28 @@
       "PackagePath": "staticwebassets\\img\\wave.svg"
     },
     {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\js\\dataTables.bootstrap5.js",
+      "PackagePath": "staticwebassets\\js\\dataTables.bootstrap5.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\js\\dataTables.min.js",
+      "PackagePath": "staticwebassets\\js\\dataTables.min.js"
+    },
+    {
       "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\js\\fastbootstrap.min.js",
       "PackagePath": "staticwebassets\\js\\fastbootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\js\\gridjs.umd.js",
+      "PackagePath": "staticwebassets\\js\\gridjs.umd.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
     },
     {
       "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\js\\scripts.js",

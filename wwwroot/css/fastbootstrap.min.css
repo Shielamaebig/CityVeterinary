@@ -6753,8 +6753,8 @@ textarea.form-control-lg{
     top:0;
     left:0;
     z-index:var(--bs-backdrop-zindex);
-    width:100vw;
-    height:100vh;
+    width:100%;
+    height:100%;
     background-color:var(--bs-backdrop-bg)
 }
 .modal-backdrop.fade{

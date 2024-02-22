@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container-fluid mt-3 mb-7">
+    <div class="d-flex justify-content-between mx-4 my-3">
+        <h3 class="title">Encoders</h3>
+        <button type="button" class="btn btn-primary">Add</button>
+    </div>
+    <div class="row g-5">
+        <div class="col-lg-12 ">
+            <div class="card border-0 h-100 shadow-lg bg-white">
+                <div class="card-body mx-5 my-2">
+                    <div class="table-responsive ">
+                        <table class="table table-hover" id="cityVetEncoder">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Language</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            $('#cityVetEncoder').DataTable({
+                ajax: {
+                    url: 'api/EncoderApi/getEncoder',
+                    dataSrc: "",
+                },
+                autoWidth: false,
+                pagingType: "simple_numbers",
+                columns: [
+                    {
+                        data: "dateAdded",
+                        className: 'text-center'
+                    },
+                    {
+                        data: "encoderName",
+                        className: 'text-center'
+                    },
+
+                ],
+                width: "240px",
+            });
+
+        });
+    </script>
+}

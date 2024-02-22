@@ -13,6 +13,9 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link href="~/css/dataTables.dataTables.min.css">
+
+    <link rel="stylesheet" href="~/css/dataTables.bootstrap5.css" />
 
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,45 +27,52 @@
 
 <body>
     <div class="container-fluid p-0">
-        <div class="layout">
-            <div class="layout-sidebar " id="sidebar">
-                <aside class="border-0">
-                    <div class="sidenav-top">
-                        <div class="py-5 text-center sidebar-divider">
-                            <img src="/img/logo.png" alt="" width="40" height="40">
+        <div class="">
+            <aside class="border-0">
+                <div class="sidebar-pos">
+                    <div class="layout-sidebar" id="sidebar">
+                        <div class="sidenav-top">
+                            <div class=" py-4 text-center sidebar-divider">
+                                <img src="/img/logo.png" alt="" width="40" height="40">
+                            </div>
+                            <div class="nav__toggle" id="side-toggle">
+                                <i class='bx bx-chevron-right'></i>
+                            </div>
                         </div>
-                        <div class="nav__toggle" id="side-toggle">
-                            <i class='bx bx-chevron-right'></i>
-                        </div>
+                        @* Web View *@
+                        <ul class="border-0 list-group px-7" style="width:30vw;">
+                            <div class="mt-5" id="sideNav">
+                                <a asp-area="" asp-controller="Home" asp-action="Index"
+                                    class="text-decoration-none side-nav" aria-current="page">
+                                    <li class="side-item sidebar-li pt-1">
+                                        <i class="bx bxs-dashboard icon  me-5 mt-1"></i>
+                                        <span>Dashboard</span>
+                                    </li>
+                                </a>
+                                <a asp-area="" asp-controller="Swagger" asp-action="Index" class="text-decoration-none"
+                                    aria-current="page">
+                                    <li class="side-item sidebar-li pt-1">
+                                        <i class="bx bxs-folder-plus icon  me-5 mt-1"></i>
+                                        <span>Api</span>
+                                    </li>
+                                </a>
+                                <a asp-asp-area="" asp-controller="Encoder" asp-action="Index"
+                                    class="text-decoration-none" aria-current="page">
+                                    <li class="side-item sidebar-li pt-1">
+                                        <i class="bx bxs-archive icon  me-5 mt-1"></i>
+                                        <span>Encoder</span>
+                                    </li>
+                                </a>
+                            </div>
+                        </ul>
+                        @* Web End View *@
                     </div>
-                    <ul class="border-0 mt-5 list-group p-0" style="width:30vw;">
-                        <div class="mt-5" id="sideNav">
-                            <a href="#" class="text-decoration-none side-nav" aria-current="page">
-                                <li class="side-item sidebar-li pt-1">
-                                    <i class="bx bxs-dashboard icon ps-4 me-5 mt-1"></i>
-                                    <span>Dashboard</span>
-                                </li>
-                            </a>
-                            <a asp-controller="Swagger" asp-action="Index" class="text-decoration-none"
-                                aria-current="page">
-                                <li class="side-item sidebar-li pt-1">
-                                    <i class="bx bxs-folder-plus icon ps-4 me-5 mt-1"></i>
-                                    <span>Api</span>
-                                </li>
-                            </a>
-                            <a href="#" class="text-decoration-none" aria-current="page">
-                                <li class="side-item sidebar-li pt-1">
+                </div>
 
-                                    <i class="bx bxs-archive icon ps-4 me-5 mt-1"></i>
-                                    <span>Data</span>
-                                </li>
-                            </a>
-                        </div>
-                    </ul>
-                </aside>
-            </div>
+            </aside>
 
-            <main class="layout-main ps-2 pe-4">
+
+            <main class="layout-main ps-2 pe-4" id="main-page">
                 <div class="layout-page">
                     <nav class="navbar layout-navbar navbar-expand-lg">
                         <div class="container-fluid">
@@ -78,27 +88,36 @@
                                 </div>
                             </div>
 
-                            <div class="collapse navbar-collapse flex-row-reverse" id="navbarExample">
-                                <!-- mobile dropdown -->
+                            <div class="collapse navbar-collapse flex-row-reverse border-bottom p-4 pb-5 mb-6"
+                                id="navbarExample">
+                                <!-- mobile nav -->
                                 <div class="mobile-nav-space">
                                     <ul class="navbar-nav me-auto mb-0 px-5" id="mobile-nav">
                                         <a href="#" class="text-decoration-none mb-3" aria-current="page">
                                             <li class="">
                                                 <i class="bx bxs-dashboard text-white me-3"></i>
-                                                <span class="text-white">Dashboard</span>
+                                                <span class="text-white">Dashboaasfasfrd</span>
                                             </li>
                                         </a>
-                                        <a class="text-decoration-none" aria-current="page">
+                                        <a asp-controller="Swagger" asp-action="Index" class="text-decoration-none mb-3"
+                                            aria-current="page">
+                                            <li class="">
+                                                <i class="bx bxs-folder-plus text-white me-3"></i>
+                                                <span class="text-white">Api</span>
+                                            </li>
+                                        </a>
+                                        <a href="#" class="text-decoration-none mb-3" aria-current="page">
                                             <li class="">
                                                 <i class="bx bxs-folder-plus text-white me-3"></i>
                                                 <span class="text-white">Classes</span>
                                             </li>
                                         </a>
+
                                     </ul>
                                 </div>
-                                <!--end mobile dropdown -->
+                                <!--end mobile nav -->
 
-                                <!-- Web nav -->
+                                <!-- Web notification -->
                                 <div class="d-flex align-self-end flex-column flex-lg-row ">
                                     <li class="nav-item navbar-dropdown dropdown-user dropdown">
                                         <a class="nav-link dropdown-toggle hide-arrow " data-bs-toggle="dropdown">
@@ -111,7 +130,6 @@
                                             </div>
                                         </a>
                                         <ul class="dropdown-menu dropdown-menu-end">
-
                                             <li>
                                                 <a class="dropdown-item" href="#">
                                                     <i class="bx bx-user me-2"></i>
@@ -119,7 +137,7 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a class="dropdown-item" href="#">
+                                                <a class="dropdown-item " href="#">
                                                     <i class="bx bx-cog me-2"></i>
                                                     <span class="align-middle">Settings</span>
                                                 </a>
@@ -129,7 +147,7 @@
                                                 <div class="dropdown-divider"></div>
                                             </li>
                                             <li>
-                                                <a class="dropdown-item" href="auth-login-basic.html">
+                                                <a class="dropdown-item logout" href="javascript:void(0);">
                                                     <i class="bx bx-power-off me-2"></i>
                                                     <span class="align-middle">Log Out</span>
                                                 </a>
@@ -137,24 +155,32 @@
                                         </ul>
                                     </li>
                                 </div>
-                                <!-- End web nav -->
+                                <!-- End notification -->
 
                             </div>
                         </div>
                     </nav>
                 </div>
                 <!-- main content -->
-                @RenderBody()
+                <div>
+                    @RenderBody()
+                </div>
                 <!--end main content -->
             </main>
         </div>
+        <div class="footer">
+            <div class="">
 
+            </div>
+        </div>
     </div>
 
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    @* <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> *@
     <script src="~/js/fastbootstrap.min.js"></script>
     <script src="~/js/scripts.js"></script>
+    <script src="~/js/main.js"></script>
+    <script src="~/js/dataTables.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>

@@ -1,0 +1,17 @@
+using AutoMapper;
+using CityVeterinary.Models;
+using CityVeterinary.Dto;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor;
+
+namespace CityVeterinary.AutoMapper
+{
+    public class AutoMapperProfile : Profile
+    {
+        public AutoMapperProfile()
+        {
+            //Post
+            CreateMap<CityVetEncoder, CityVetEncoderDto>().ReverseMap();
+            CreateMap<Baranggay, BaranggayDto>().ReverseMap();
+        }
+    }
+}
