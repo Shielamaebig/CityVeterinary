@@ -28,16 +28,15 @@
 <body>
     <div class="container-fluid p-0">
         <div class="">
+
             <aside class="border-0">
                 <div class="sidebar-pos">
                     <div class="layout-sidebar" id="sidebar">
                         <div class="sidenav-top">
-                            <div class=" py-4 text-center sidebar-divider">
+                            <div class=" py-4 sidebar-topImage">
                                 <img src="/img/logo.png" alt="" width="40" height="40">
                             </div>
-                            <div class="nav__toggle" id="side-toggle">
-                                <i class='bx bx-chevron-right'></i>
-                            </div>
+
                         </div>
                         @* Web View *@
                         <ul class="border-0 list-group px-7" style="width:30vw;">
@@ -74,12 +73,15 @@
 
             <main class="layout-main ps-2 pe-4" id="main-page">
                 <div class="layout-page">
+
                     <nav class="navbar layout-navbar navbar-expand-lg">
+
                         <div class="container-fluid">
                             <div class="openbtn mt-2" data-bs-toggle="collapse" data-bs-target="#navbarExample"
                                 aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
                                 <span></span><span></span><span></span>
                             </div>
+
                             <div class="mobile-nav-avatar">
                                 <!-- bx-tada additional in boxicon to animate-->
                                 <i class='bx bxs-bell-ring bx-tada text-white me-2'></i>
@@ -88,7 +90,7 @@
                                 </div>
                             </div>
 
-                            <div class="collapse navbar-collapse flex-row-reverse border-bottom p-4 pb-5 mb-6"
+                            <div class="collapse navbar-collapse flex-row-reverse border-bottom  pb-5 mb-6"
                                 id="navbarExample">
                                 <!-- mobile nav -->
                                 <div class="mobile-nav-space">
@@ -119,11 +121,35 @@
 
                                 <!-- Web notification -->
                                 <div class="d-flex align-self-end flex-column flex-lg-row ">
+                                    <div class="nav__toggle" id="side-toggle">
+                                        <i class='bx bx-left-arrow-alt'></i>
+                                    </div>
                                     <li class="nav-item navbar-dropdown dropdown-user dropdown">
                                         <a class="nav-link dropdown-toggle hide-arrow " data-bs-toggle="dropdown">
                                             <!-- bx-tada additional in boxicon to animate-->
                                             <div id="web">
-                                                <i class='bx bxs-bell-ring bx-tada me-2'></i>
+                                                <i class='bx bxs-bell-ring bx-tada me-10 mt-2'>
+                                                    <span
+                                                        class="position-absolute top-0 start-100 translate-middle p-1 text-bg-danger border border-light rounded-circle">
+                                                        <span class="visually-hidden">New alerts</span>
+                                                    </span>
+                                                </i>
+                                            </div>
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li>
+                                                <a class="dropdown-item " href="#">
+                                                    <i class="bx bx-user me-2"></i>
+                                                    <small>Juan D. <span class="badge bg-danger ms-5">New</span></small>
+                                                </a>
+                                            </li>
+
+                                        </ul>
+
+                                        <a class="nav-link dropdown-toggle hide-arrow " data-bs-toggle="dropdown">
+                                            <!-- bx-tada additional in boxicon to animate-->
+                                            <div id="web">
+
                                                 <div class="avatar avatar-online" id="web-avatar">
                                                     <span class="avatar text-bg-secondary">OP</span>
                                                 </div>
