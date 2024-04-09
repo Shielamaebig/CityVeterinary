@@ -5,6 +5,18 @@
       "PackagePath": "staticwebassets\\CityVeterinary.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\css\\animations.css",
+      "PackagePath": "staticwebassets\\css\\animations.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\css\\boxicons.css",
+      "PackagePath": "staticwebassets\\css\\boxicons.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\css\\boxicons.min.css",
+      "PackagePath": "staticwebassets\\css\\boxicons.min.css"
+    },
+    {
       "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\css\\dataTables.bootstrap5.css",
       "PackagePath": "staticwebassets\\css\\dataTables.bootstrap5.css"
     },
@@ -17,12 +29,20 @@
       "PackagePath": "staticwebassets\\css\\fastbootstrap.min.css"
     },
     {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\css\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\css\\jquery-ui.css"
+    },
+    {
       "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\css\\login.css",
       "PackagePath": "staticwebassets\\css\\login.css"
     },
     {
       "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\css\\mermaid.min.css",
       "PackagePath": "staticwebassets\\css\\mermaid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\css\\register.css",
+      "PackagePath": "staticwebassets\\css\\register.css"
     },
     {
       "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\css\\site.css",
@@ -33,8 +53,32 @@
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\css\\transformations.css",
+      "PackagePath": "staticwebassets\\css\\transformations.css"
+    },
+    {
       "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\fonts\\boxicons.eot",
+      "PackagePath": "staticwebassets\\fonts\\boxicons.eot"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\fonts\\boxicons.svg",
+      "PackagePath": "staticwebassets\\fonts\\boxicons.svg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\fonts\\boxicons.ttf",
+      "PackagePath": "staticwebassets\\fonts\\boxicons.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\fonts\\boxicons.woff",
+      "PackagePath": "staticwebassets\\fonts\\boxicons.woff"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\fonts\\boxicons.woff2",
+      "PackagePath": "staticwebassets\\fonts\\boxicons.woff2"
     },
     {
       "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\img\\AccesDenied.png",
@@ -53,12 +97,28 @@
       "PackagePath": "staticwebassets\\img\\access.png"
     },
     {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\img\\blob.svg",
+      "PackagePath": "staticwebassets\\img\\blob.svg"
+    },
+    {
       "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\img\\bx-check.svg",
       "PackagePath": "staticwebassets\\img\\bx-check.svg"
     },
     {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\img\\bx-left-arrow-alt.svg",
+      "PackagePath": "staticwebassets\\img\\bx-left-arrow-alt.svg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\img\\bx-right-arrow-alt.svg",
+      "PackagePath": "staticwebassets\\img\\bx-right-arrow-alt.svg"
+    },
+    {
       "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\img\\cgpp-2.png",
       "PackagePath": "staticwebassets\\img\\cgpp-2.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\img\\default_profile.png",
+      "PackagePath": "staticwebassets\\img\\default_profile.png"
     },
     {
       "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\img\\engines-bro.png",
@@ -69,8 +129,16 @@
       "PackagePath": "staticwebassets\\img\\logo.png"
     },
     {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\img\\petusers.png",
+      "PackagePath": "staticwebassets\\img\\petusers.png"
+    },
+    {
       "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\img\\s.png",
       "PackagePath": "staticwebassets\\img\\s.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\img\\users.png",
+      "PackagePath": "staticwebassets\\img\\users.png"
     },
     {
       "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\img\\wave.svg",
@@ -97,8 +165,20 @@
       "PackagePath": "staticwebassets\\js\\gridjs.umd.js"
     },
     {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\js\\jquery-3.6.0.js",
+      "PackagePath": "staticwebassets\\js\\jquery-3.6.0.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\js\\jquery-ui.js",
+      "PackagePath": "staticwebassets\\js\\jquery-ui.js"
+    },
+    {
       "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\js\\main.js",
       "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\js\\register.js",
+      "PackagePath": "staticwebassets\\js\\register.js"
     },
     {
       "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\js\\scripts.js",
@@ -287,6 +367,82 @@
     {
       "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\lib\\jquery-ui\\AUTHORS.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-ui\\AUTHORS.txt"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\lib\\jquery-ui\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-ui\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\lib\\jquery-ui\\external\\jquery\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-ui\\external\\jquery\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\lib\\jquery-ui\\images\\ui-icons_444444_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jquery-ui\\images\\ui-icons_444444_256x240.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\lib\\jquery-ui\\images\\ui-icons_555555_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jquery-ui\\images\\ui-icons_555555_256x240.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\lib\\jquery-ui\\images\\ui-icons_777620_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jquery-ui\\images\\ui-icons_777620_256x240.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\lib\\jquery-ui\\images\\ui-icons_777777_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jquery-ui\\images\\ui-icons_777777_256x240.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\lib\\jquery-ui\\images\\ui-icons_cc0000_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jquery-ui\\images\\ui-icons_cc0000_256x240.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\lib\\jquery-ui\\images\\ui-icons_ffffff_256x240.png",
+      "PackagePath": "staticwebassets\\lib\\jquery-ui\\images\\ui-icons_ffffff_256x240.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\lib\\jquery-ui\\index.html",
+      "PackagePath": "staticwebassets\\lib\\jquery-ui\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\lib\\jquery-ui\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\lib\\jquery-ui\\jquery-ui.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\lib\\jquery-ui\\jquery-ui.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-ui\\jquery-ui.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\lib\\jquery-ui\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\lib\\jquery-ui\\jquery-ui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\lib\\jquery-ui\\jquery-ui.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-ui\\jquery-ui.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\lib\\jquery-ui\\jquery-ui.structure.css",
+      "PackagePath": "staticwebassets\\lib\\jquery-ui\\jquery-ui.structure.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\lib\\jquery-ui\\jquery-ui.structure.min.css",
+      "PackagePath": "staticwebassets\\lib\\jquery-ui\\jquery-ui.structure.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\lib\\jquery-ui\\jquery-ui.theme.css",
+      "PackagePath": "staticwebassets\\lib\\jquery-ui\\jquery-ui.theme.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\lib\\jquery-ui\\jquery-ui.theme.min.css",
+      "PackagePath": "staticwebassets\\lib\\jquery-ui\\jquery-ui.theme.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\lib\\jquery-ui\\package.json",
+      "PackagePath": "staticwebassets\\lib\\jquery-ui\\package.json"
     },
     {
       "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",

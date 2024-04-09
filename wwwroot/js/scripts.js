@@ -1,14 +1,5 @@
-// document.body.style.zoom = "80%";
+document.body.style.zoom = "90%";
 
-/*=============== LINK ACTIVE ===============*/
-const linkColor = document.querySelectorAll('.sidebar-li')
-const activeLinks = document.querySelectorAll('.active')
-function colorLink(){
-    linkColor.forEach(l => l.classList.remove('active'))
-    this.classList.add('active')
-}
-
-linkColor.forEach(l => l.addEventListener('click', colorLink))
 /*=============== SHOW HIDDEN MENU ===============*/
 const showMenu = (toggleId, navbarId, mainId) =>{
     const toggle = document.getElementById(toggleId),

@@ -3,20 +3,30 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <div class="container-fluid mt-3 mb-7">
-    <div class="d-flex justify-content-between mx-4 my-3">
-        <h3 class="title">Encoders</h3>
-        <button type="button" class="btn btn-primary">Add</button>
+
+    <div class="card border-0 h-100 shadow-lg mb-3 encoder-bg">
+        <div class="card-body">
+            <div class="d-flex justify-content-between mx-4 my-3 align-content-center">
+                <h3 class="text-discovery fw-semibold mt-2">Encoders</h3>
+                <button type="button" class="btn btn-light btn-sm rounded-3" data-bs-toggle="modal"
+                    data-bs-target="#AddEncoderModal">
+                    <i class='bx bx-user-plus fs-4 '></i></button>
+            </div>
+        </div>
     </div>
+
     <div class="row g-5">
         <div class="col-lg-12 ">
             <div class="card border-0 h-100 shadow-lg bg-white">
                 <div class="card-body mx-5 my-2">
                     <div class="table-responsive ">
-                        <table class="table table-hover" id="cityVetEncoder">
+                        <table class="table " id="cityVetEncoder">
                             <thead>
                                 <tr>
+                                    <th>No.</th>
+                                    <th>Date</th>
                                     <th>Name</th>
-                                    <th>Language</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                         </table>
@@ -27,33 +37,125 @@
     </div>
 </div>
 
+@* modal add Encoder POST *@
+<div class="modal fade" id="AddEncoderModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="px-3">
+                <div class="modal-header">
+                    <div class="align-content-start">
+                        <h5 class="modal-title title" id="staticBackdropLabel">Add Encoder
+                            <i class="bx bx-plus"></i>
+                        </h5>
+                    </div>
+                    <div class="bg-body-secondary p-2 btn-modal-close shadow">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <form id="encoderForm">
+                    <div class="mb-3">
+                        <label for="cityVetEncoders" class="form-label ">Name of Encoder</label>
+                        <input type="text" class="form-control mt-3" id="encoderName" name="encoderName" />
+                    </div>
+                    <div class="text-end">
+                        <button class="btn btn-default" type="button" data-bs-dismiss="modal"
+                            aria-label="Close">Cancel</button>
+                        <button type="button" id="btnEncoderSave" class="btn btn-primary btnEncoderPost">Submit</button>
+                    </div>
+                </form>
+            </div>
 
+        </div>
+    </div>
+</div>
+
+@* modal Update *@
+
+<div class="modal fade" id="updateModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="px-3">
+                <div class="modal-header">
+                    <div class="align-content-start">
+                        <h5 class="modal-title title" id="staticBackdropLabel">Update Encoder
+                            <i class='bx bx-pencil'></i>
+                        </h5>
+                    </div>
+                    <div class="bg-body-secondary p-2 btn-modal-close shadow">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <form id="encoderupdate">
+                    <div class="mb-3">
+                        <label for="cityVetEncoders" class="form-label ">Name of Encoder</label>
+                        <input type="text" class="form-control mt-3" id="encoderName" name="encoderName" />
+                    </div>
+                    <input type="hidden" id="id" name="id">
+                    <div class="text-end">
+                        <button class="btn btn-default" type="button" data-bs-dismiss="modal"
+                            aria-label="Close">Cancel</button>
+                        <button type="button" class="btn btn-primary updateBtn">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+@* delete *@
+<div class="modal fade" id="deleteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+                    <form id="encoderDelete">
+                        <div class="p-5">
+                            <div class="d-flex justify-content-center ">
+                                <div class="m-0 p-0">
+                                    <div class=" icon_delete p-4">
+                                        <i class='bx bx-error icon-danger text-center fs-1 '></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <p class=" mt-2 mb-0 text-black fs-2 text-center fw-semibold">Are you sure?</p>
+                                <p class=" mb-0 delete-text text-center"> This action cannot be undone. All values
+                                    associated with
+                                    this fiels
+                                    will be
+                                    lost:
+                                </p>
+                                <p class=" my-2 fs-6 fw-semibold text-center text-black" id="deleteName">
+                                </p>
+                            </div>
+                            <input type="hidden" id="encoderName" name="encoderName" />
+                            <input type="hidden" id="id" name="id" />
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-danger deleteBtn" type="button">Delete field</button>
+                                <button class="btn btn-default " type="button" data-bs-dismiss="modal"
+                                    aria-label="Close">Cancel</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
 
 @section scripts
 {
     <script>
         $(document).ready(function () {
-            $('#cityVetEncoder').DataTable({
-                ajax: {
-                    url: 'api/EncoderApi/getEncoder',
-                    dataSrc: "",
-                },
-                autoWidth: false,
-                pagingType: "simple_numbers",
-                columns: [
-                    {
-                        data: "dateAdded",
-                        className: 'text-center'
-                    },
-                    {
-                        data: "encoderName",
-                        className: 'text-center'
-                    },
-
-                ],
-                width: "240px",
-            });
-
-        });
+            encoderScripts();
+        }); 
     </script>
 }

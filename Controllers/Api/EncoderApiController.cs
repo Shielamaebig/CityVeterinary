@@ -30,9 +30,9 @@ namespace CityVeterinary.Controllers.Api
         public async Task<ActionResult> PostEncoder([FromBody] CityVetEncoderDto cityVetEncoderDto)
         {
             var ncdr = _mapper.Map<CityVetEncoderDto, CityVetEncoder>(cityVetEncoderDto);
-            if (_db.Baranggays.Any(x => x.BaranggayName == ncdr.EncoderName || x.BaranggayName == null))
+            if (_db.CityVetEncoders.Any(x => x.EncoderName == ncdr.EncoderName || x.EncoderName == null))
             {
-                return BadRequest("Encoder Already Exist");
+                return BadRequest("Encoder Already Exist/Null");
             }
             ncdr.EncoderName = cityVetEncoderDto.EncoderName;
             ncdr.DateAdded = DateTime.Now.ToString("MMMM dd yyyy hh:mm tt");
@@ -75,8 +75,9 @@ namespace CityVeterinary.Controllers.Api
             {
                 return NotFound();
             }
+            _mapper.Map(cityVetEncoderDto, ncdrs);
             cityVetEncoderDto.EncoderName = ncdrs.EncoderName;
-
+            ncdrs.DateAdded = DateTime.Now.ToString("MMMM dd yyyy hh:mm tt");
             await _db.SaveChangesAsync();
             return Ok("200");
         }

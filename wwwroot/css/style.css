@@ -41,36 +41,65 @@
     main{
         margin-left: 0;
     }
+    .nav__toggle {
+        display: none;
+    }
  }
 
   /* Web*/
   @media (min-width: 993px) { 
-    #mobile-avatar {
-        display: none;
-     }
-     #mobile-nav {
-        display: none;
-     }
-     .openbtn{
-        display: none;
-     }
-     .dashboard{
-        padding-top: 2rem;
-    }
-    .mobile-nav-avatar{
-        display: none;
-    }
-    main{
-        background: #fafafa;
-        height: 100%;
-        position: relative;
-        z-index: 1;
-        margin-left: 270px;
-        transition: .4s linear;
+        #mobile-avatar {
+            display: none;
+        }
+        #mobile-nav {
+            display: none;
+        }
+        .openbtn{
+            display: none;
+        }
+        .dashboard{
+            padding-top: 2rem;
+        }
+        .mobile-nav-avatar{
+            display: none;
+        }
+        main{
+            background: #fafafa;
+            height: 100%;
+            position: relative;
+            margin-left: 270px;
+            transition: .4s linear;
 
-    }
+        }
+        .nav__toggle {
+            position: relative;
+            width: 30px;
+            height: 30px;
+            background-color: #c5c8e3;
+            color: #161616;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            display: grid;
+            place-items: center;
+            top: 1rem;
+            /* right: 10%; */
+            cursor: pointer;
+            transition: .4s linear;
+            transform: rotate(0deg);
+        }
+        .show-main {
+            margin-left: 100px;
+            transition: .6s ease-out;
+        }
    }
-
+.btn-modal-close {
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    position: relative;
+    top: -2.5rem;
+    left: 1rem;
+}
 
 *{
     padding: 0;
@@ -98,7 +127,7 @@ body {
     position: relative; */
 
     background-color: #3e20d4c2;
-    height:97vh;
+    height:107vh;
     margin-left: 1rem;
     border-radius: 15px;    
     box-shadow: 2px 2px 3px;
@@ -119,35 +148,16 @@ aside {
     display: block;
 }
 
-.nav__toggle {
-    position: relative;
-    width: 30px;
-    height: 30px;
-    background-color: #c5c8e3;
-    color: #161616;
-    border-radius: 10px;
-    font-size: 1.2rem;
-    display: grid;
-    place-items: center;
-    top: .5rem;
-    right: 106.1rem;
-    cursor: pointer;
-    transition: .4s linear;
-    z-index: 999999;
-    transform: rotate(0deg);
-}
+
 .show-menu {
     width: 70px;
     transition: .6s ease-out;
 }
-.show-main {
-    margin-left: 100px;
-    transition: .6s ease-out;
-}
+
 .rotate-icon {
     transform: rotate(180deg);
-    top: .5rem;
-    right: 116.8rem;
+    /* top: .5rem;
+    right: 116.8rem; */
     transition:  .5s linear;
 }
 /* .active{
@@ -308,7 +318,9 @@ h1,h2,h3,h4,h5, span, small{
 
 .title {
     color: #3E60C1;
+    font-size: 25px;
 }
+
 .small{
     font-weight: 200;
     color: #7c7c7c;
@@ -321,7 +333,11 @@ h1,h2,h3,h4,h5, span, small{
 .sidebg {
     background: #3E60C1;
 }
-
+.encoder-bg {
+    background-image: url(../img/blob.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 /* dataTable */
 .dt-paging-button {
     margin-top:5px;
@@ -354,3 +370,19 @@ h1,h2,h3,h4,h5, span, small{
     font-family: "Roboto Mono", sans-serif;
     background-color: white;
 }
+.dt-search {
+    margin-bottom: 30px;
+}
+.icon_delete {
+    background-color: rgb(242, 181, 181);
+    border-radius: 40px;
+
+}
+.delete-text {
+    color: #858585;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+
