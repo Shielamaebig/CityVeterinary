@@ -19,25 +19,32 @@ namespace CityVeterinary.Models
         public string? Gender { get; set; }
         public string? Powner { get; set; }
 
+        public int? PetOwn { get; set; }
+
 
         public string? DateVaxStart { get; set; }
         public string? DateVaxEnd { get; set; }
 
         //Vaccine
-        public int VaccineId { get; set; }
+        public int? VaccineId { get; set; }
         public virtual Vaccine? Vaccine { get; set; }
         public string? VaccineName { get; set; }
 
 
         // Veterinarian
-        public int VeterinarianId { get; set; }
+        public int? VeterinarianId { get; set; }
         public virtual Veterinarian? Veterinarian { get; set; }
         public string? VeterinarianName { get; set; }
 
         // Vaccinator
-        public int VaccinatorId { get; set; }
+        public int? VaccinatorId { get; set; }
         public virtual Vaccinator? Vaccinator { get; set; }
         public string? VaccinatorName { get; set; }
+
+        //SERVICES
+        public int ServicesId { get; set; }
+        public virtual Services? Services { get; set; }
+        public string? ServiceName { get; set; }
 
     }
 }

@@ -25,12 +25,23 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg mt-4">
+        <div class="container-fluid justify-content-center mt-10">
+            @* <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarExample"
+            aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button> *@
+            <a class="navbar-brand ms-3" href="#"><img src="/img/cgpp-2.png" width="80" /></a>
+
+        </div>
+    </nav>
     @RenderBody()
 
     @* <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> *@
     <script src="~/js/fastbootstrap.min.js"></script>
     <script src="~/js/scripts.js"></script>
     <script src="~/js/register.js"></script>
+    <script src="~/js/appointment.js"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 

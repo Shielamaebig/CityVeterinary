@@ -1,0 +1,175 @@
+@{
+    ViewData["Title"] = "VaccineType";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="card border-0 h-100 shadow-lg mb-3 encoder-bg">
+    <div class="card-body">
+        <div class="d-flex justify-content-between mx-4 my-3 align-content-center">
+            <h3 class="text-discovery fw-semibold mt-2">Vaccine Types</h3>
+            <button type="button" class="btn btn-light btn-sm rounded-3" data-bs-toggle="modal"
+                data-bs-target="#AddVaccineeModal">
+                <i class='bx bxs-dog fs-4 '></i><i class='bx bx-plus'></i></button>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row g-5">
+        <div class="card border-0 h-100 shadow-lg bg-white">
+            <div class="card-body mx-5 my-2">
+                <div class="table-responsive ">
+                    <table class="table " id="vaxTypeTable">
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Date Added</th>
+                                <th>Manufacturer</th>
+                                <th>LotNumber</th>
+                                <th>Vaccine</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* modal add Encoder POST *@
+<div class="modal fade" id="AddVaccineeModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="px-3">
+                <div class="modal-header">
+                    <div class="align-content-start">
+                        <h5 class="modal-title title" id="staticBackdropLabel">Add Vaccine
+                            <i class="bx bx-plus"></i>
+                        </h5>
+                    </div>
+                    <div class="bg-body-secondary p-2 btn-modal-close shadow">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <form id="serviceForm">
+                    <div class="mb-3">
+                        <label for="cityVetEncoders" class="form-label ">Vaccine Type : </label>
+                        <input type="text" class="form-control mt-3" id="vaccineName" name="vaccineName" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="cityVetEncoders" class="form-label ">Manufacturer : </label>
+                        <input type="text" class="form-control mt-3" id="manufacturer" name="manufacturer" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="cityVetEncoders" class="form-label ">Lot Number : </label>
+                        <input type="text" class="form-control mt-3" id="lotNumber" name="lotNumber" required />
+                    </div>
+                    <div class="text-end">
+                        <button class="btn btn-default" type="button" data-bs-dismiss="modal"
+                            aria-label="Close">Cancel</button>
+                        <button type="button" id="btnSave" class="btn btn-primary btnPost">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@* modal Update *@
+<div class="modal fade" id="updateVaxModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="px-3">
+                <div class="modal-header">
+                    <div class="align-content-start">
+                        <h5 class="modal-title title" id="staticBackdropLabel">Update Pet Type
+                            <i class='bx bx-pencil'></i>
+                        </h5>
+                    </div>
+                    <div class="bg-body-secondary p-2 btn-modal-close shadow">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <form id="vaxFormupdate">
+                    <div class="mb-3">
+                        <label for="cityVetEncoders" class="form-label ">Vaccine Name : </label>
+                        <input type="text" class="form-control mt-3" id="vaccineName" name="vaccineName" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="cityVetEncoders" class="form-label ">Manufacturer : </label>
+                        <input type="text" class="form-control mt-3" id="manufacturer" name="manufacturer" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="cityVetEncoders" class="form-label ">Lot Number : </label>
+                        <input type="text" class="form-control mt-3" id="lotNumber" name="lotNumber" required />
+                    </div>
+                    <input type="hidden" id="id" name="id" />
+
+                    <div class="text-end">
+                        <button class="btn btn-default" type="button" data-bs-dismiss="modal"
+                            aria-label="Close">Cancel</button>
+                        <button type="button" id="UpadatebtnSave" class="btn btn-primary updateBtn">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@* delete *@
+<div class="modal fade" id="deleteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+                    <form id="vaxDelete">
+                        <div class="p-5">
+                            <div class="d-flex justify-content-center ">
+                                <div class="m-0 p-0">
+                                    <div class=" icon_delete p-4">
+                                        <i class='bx bx-error icon-danger text-center fs-1 '></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <p class=" mt-2 mb-0 text-black fs-2 text-center fw-semibold">Are you sure?</p>
+                                <p class=" mb-0 delete-text text-center"> This action cannot be undone. All values
+                                    associated with
+                                    this fiels
+                                    will be
+                                    lost:
+                                </p>
+                                <p class=" my-2 fs-6 fw-semibold text-center text-black" id="deleteName">
+                                </p>
+                            </div>
+                            <input type="hidden" id="vaccineName" name="vaccineName" />
+                            <input type="hidden" id="id" name="id" />
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-danger deleteBtn" type="button">Delete field</button>
+                                <button class="btn btn-default " type="button" data-bs-dismiss="modal"
+                                    aria-label="Close">Cancel</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            VaccineTypeComponent();
+        }); 
+    </script>
+}

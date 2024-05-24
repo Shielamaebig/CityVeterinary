@@ -22,6 +22,70 @@ namespace CityVeterinary.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("CityVeterinary.Models.Appointment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AppointmentDate")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AppointmentTime")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("BaranggayId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("BreedTypeId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ContactNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DateAdded")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FirstName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Gender")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Markings")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MiddleName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PetDateOfBirth")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PetName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("PetTypeId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UniqueCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BaranggayId");
+
+                    b.HasIndex("BreedTypeId");
+
+                    b.HasIndex("PetTypeId");
+
+                    b.ToTable("Appointments");
+                });
+
             modelBuilder.Entity("CityVeterinary.Models.Baranggay", b =>
                 {
                     b.Property<int>("Id")
@@ -50,11 +114,17 @@ namespace CityVeterinary.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("BreedName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("DateAdded")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("PetTypeId")
                         .HasColumnType("int");
+
+                    b.Property<string>("PetTypeName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -148,10 +218,16 @@ namespace CityVeterinary.Migrations
                     b.Property<string>("ContactNumber")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("DateAdded")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FileExtension")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("FirstName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("FullName")
+                    b.Property<string>("ImagePath")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LastName")
@@ -215,25 +291,34 @@ namespace CityVeterinary.Migrations
                     b.Property<string>("PetName")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("PetOwn")
+                        .HasColumnType("int");
+
                     b.Property<string>("PetType")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Powner")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("VaccinatorId")
+                    b.Property<string>("ServiceName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ServicesId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("VaccinatorId")
                         .HasColumnType("int");
 
                     b.Property<string>("VaccinatorName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("VaccineId")
+                    b.Property<int?>("VaccineId")
                         .HasColumnType("int");
 
                     b.Property<string>("VaccineName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("VeterinarianId")
+                    b.Property<int?>("VeterinarianId")
                         .HasColumnType("int");
 
                     b.Property<string>("VeterinarianName")
@@ -242,6 +327,8 @@ namespace CityVeterinary.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("PetInformationId");
+
+                    b.HasIndex("ServicesId");
 
                     b.HasIndex("VaccinatorId");
 
@@ -272,6 +359,25 @@ namespace CityVeterinary.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("RecentActivities");
+                });
+
+            modelBuilder.Entity("CityVeterinary.Models.Services", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("DateAdded")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Service")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Services");
                 });
 
             modelBuilder.Entity("CityVeterinary.Models.Vaccinator", b =>
@@ -337,6 +443,31 @@ namespace CityVeterinary.Migrations
                     b.ToTable("Veterinarians");
                 });
 
+            modelBuilder.Entity("CityVeterinary.Models.Appointment", b =>
+                {
+                    b.HasOne("CityVeterinary.Models.Baranggay", "Baranggay")
+                        .WithMany()
+                        .HasForeignKey("BaranggayId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CityVeterinary.Models.BreedType", "BreedType")
+                        .WithMany()
+                        .HasForeignKey("BreedTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CityVeterinary.Models.PetType", "PetType")
+                        .WithMany()
+                        .HasForeignKey("PetTypeId");
+
+                    b.Navigation("Baranggay");
+
+                    b.Navigation("BreedType");
+
+                    b.Navigation("PetType");
+                });
+
             modelBuilder.Entity("CityVeterinary.Models.BreedType", b =>
                 {
                     b.HasOne("CityVeterinary.Models.PetType", "PetType")
@@ -392,25 +523,27 @@ namespace CityVeterinary.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("CityVeterinary.Models.Vaccinator", "Vaccinator")
+                    b.HasOne("CityVeterinary.Models.Services", "Services")
                         .WithMany()
-                        .HasForeignKey("VaccinatorId")
+                        .HasForeignKey("ServicesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("CityVeterinary.Models.Vaccinator", "Vaccinator")
+                        .WithMany()
+                        .HasForeignKey("VaccinatorId");
 
                     b.HasOne("CityVeterinary.Models.Vaccine", "Vaccine")
                         .WithMany()
-                        .HasForeignKey("VaccineId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("VaccineId");
 
                     b.HasOne("CityVeterinary.Models.Veterinarian", "Veterinarian")
                         .WithMany()
-                        .HasForeignKey("VeterinarianId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("VeterinarianId");
 
                     b.Navigation("PetInformation");
+
+                    b.Navigation("Services");
 
                     b.Navigation("Vaccinator");
 

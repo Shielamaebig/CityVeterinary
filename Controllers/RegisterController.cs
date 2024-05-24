@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace CityVeterinary.Controllers
+namespace CityVeterinary.Controllers.Api
 {
     public class RegisterController : Controller
     {

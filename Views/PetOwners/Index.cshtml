@@ -1,0 +1,364 @@
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container-fluid mt-3 pb-10">
+    <div class="card border-0 h-100 shadow-lg encoder-bg">
+        <div class="card-body">
+            <div class="d-flex justify-content-between mx-4 my-3 align-content-center">
+                <h3 class="text-discovery fw-semibold mt-2">Pet Owner</h3>
+                <button type="button" class="btn btn-light btn-sm rounded-3" data-bs-toggle="modal"
+                    data-bs-target="#AddPetOwnersModal">
+                    <i class='bx bx-user-plus fs-4 '></i></button>
+            </div>
+        </div>
+    </div>
+    <ul class="nav nav-tabs mt-4 ms-4 mb-3" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="icon-tab-0" data-bs-toggle="tab" href="#icon-tabpanel-0" role="tab"
+                aria-controls="icon-tabpanel-0" aria-selected="true"><i class='bx bx-list-ul'></i> </a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="icon-tab-1" data-bs-toggle="tab" href="#icon-tabpanel-1" role="tab"
+                aria-controls="icon-tabpanel-1" aria-selected="false"> <i class='bx bxs-grid-alt'></i> </a>
+        </li>
+
+    </ul>
+    <div class="card border-0 h-100 shadow-lg bg-white petownerbg">
+        <div class="card-body">
+            <div class="tab-content" id="tab-content">
+                @* GridTable *@
+                <div class="tab-pane active" id="icon-tabpanel-0" role="tabpanel" aria-labelledby="icon-tab-0">
+                    <div class="row">
+                        <div class="table-responsive">
+                            <table class="table " id="petOwnerTable">
+                                <thead>
+                                    <tr>
+                                        <th>No.</th>
+                                        <th>Profile</th>
+                                        <th>Name</th>
+                                        <th>Date Added</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane" id="icon-tabpanel-1" role="tabpanel" aria-labelledby="icon-tab-1">
+                    <div class="row g-5">
+                        <div class="input-group input-group-prefix">
+                            <input type="text" id="search-input" name="search-input"
+                                class="form-control bg-transparent py-3" placeholder="Search documents">
+                            <label class="input-group-text">
+                                <i class=" bx bx-search-alt"></i>
+                            </label>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-header d-flex align-items-center border-bottom">
+                                    <span class="avatar text-bg-primary avatar-lg fs-5">R</span>
+                                    <div class="ms-3">
+                                        <h6 class="mb-0 fs-sm">Special title treatment</h6>
+                                        <span class="text-muted fs-sm">September 14, 2022</span>
+                                    </div>
+                                    <button class="btn text-muted ms-auto" type="btn"><i
+                                            class="fas fa-ellipsis-v"></i></button>
+                                </div>
+                                <div class="card-body">
+                                    With supporting text below as a natural lead-in to additional content.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-header d-flex align-items-center border-bottom">
+                                    <span class="avatar text-bg-primary avatar-lg fs-5">R</span>
+                                    <div class="ms-3">
+                                        <h6 class="mb-0 fs-sm">Special title treatment</h6>
+                                        <span class="text-muted fs-sm">September 14, 2022</span>
+                                    </div>
+                                    <button class="btn text-muted ms-auto" type="btn"><i
+                                            class="fas fa-ellipsis-v"></i></button>
+                                </div>
+                                <div class="card-body">
+                                    With supporting text below as a natural lead-in to additional content.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-header d-flex align-items-center border-bottom">
+                                    <span class="avatar text-bg-primary avatar-lg fs-5">R</span>
+                                    <div class="ms-3">
+                                        <h6 class="mb-0 fs-sm">Special title treatment</h6>
+                                        <span class="text-muted fs-sm">September 14, 2022</span>
+                                    </div>
+                                    <button class="btn text-muted ms-auto" type="btn"><i
+                                            class="fas fa-ellipsis-v"></i></button>
+                                </div>
+                                <div class="card-body">
+                                    With supporting text below as a natural lead-in to additional content.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-header d-flex align-items-center border-bottom">
+                                    <span class="avatar text-bg-primary avatar-lg fs-5">R</span>
+                                    <div class="ms-3">
+                                        <h6 class="mb-0 fs-sm">Special title treatment</h6>
+                                        <span class="text-muted fs-sm">September 14, 2022</span>
+                                    </div>
+                                    <button class="btn text-muted ms-auto" type="btn"><i
+                                            class="fas fa-ellipsis-v"></i></button>
+                                </div>
+                                <div class="card-body">
+                                    With supporting text below as a natural lead-in to additional content.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-header d-flex align-items-center border-bottom">
+                                    <span class="avatar text-bg-primary avatar-lg fs-5">R</span>
+                                    <div class="ms-3">
+                                        <h6 class="mb-0 fs-sm">Special title treatment</h6>
+                                        <span class="text-muted fs-sm">September 14, 2022</span>
+                                    </div>
+                                    <button class="btn text-muted ms-auto" type="btn"><i
+                                            class="fas fa-ellipsis-v"></i></button>
+                                </div>
+                                <div class="card-body">
+                                    With supporting text below as a natural lead-in to additional content.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-header d-flex align-items-center border-bottom">
+                                    <span class="avatar text-bg-primary avatar-lg fs-5">R</span>
+                                    <div class="ms-3">
+                                        <h6 class="mb-0 fs-sm">Special title treatment</h6>
+                                        <span class="text-muted fs-sm">September 14, 2022</span>
+                                    </div>
+                                    <button class="btn text-muted ms-auto" type="btn"><i
+                                            class="fas fa-ellipsis-v"></i></button>
+                                </div>
+                                <div class="card-body">
+                                    With supporting text below as a natural lead-in to additional content.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-header d-flex align-items-center border-bottom">
+                                    <span class="avatar text-bg-primary avatar-lg fs-5">R</span>
+                                    <div class="ms-3">
+                                        <h6 class="mb-0 fs-sm">Special title treatment</h6>
+                                        <span class="text-muted fs-sm">September 14, 2022</span>
+                                    </div>
+                                    <button class="btn text-muted ms-auto" type="btn"><i
+                                            class="fas fa-ellipsis-v"></i></button>
+                                </div>
+                                <div class="card-body">
+                                    With supporting text below as a natural lead-in to additional content.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-header d-flex align-items-center border-bottom">
+                                    <span class="avatar text-bg-primary avatar-lg fs-5">R</span>
+                                    <div class="ms-3">
+                                        <h6 class="mb-0 fs-sm">Special title treatment</h6>
+                                        <span class="text-muted fs-sm">September 14, 2022</span>
+                                    </div>
+                                    <button class="btn text-muted ms-auto" type="btn"><i
+                                            class="fas fa-ellipsis-v"></i></button>
+                                </div>
+                                <div class="card-body">
+                                    With supporting text below as a natural lead-in to additional content.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@* modal add Encoder POST *@
+<div class="modal fade" id="AddPetOwnersModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="px-3">
+                <div class="modal-header">
+                    <div class="align-content-start">
+                        <h5 class="modal-title title" id="staticBackdropLabel">Add Pet Owners
+                            <i class="bx bx-plus"></i>
+                        </h5>
+                    </div>
+                    <div class="bg-body-secondary p-2 btn-modal-close shadow">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <form id="petOwnerForm" name="petOwnerForm" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="form-floating mb-3 col">
+                            <input type="text" class="form-control" id="firstName" name="firstName"
+                                placeholder="name@example.com" />
+                            <label class="ms-2" for="floatingInput">First Name</label>
+                        </div>
+                        <div class="form-floating col">
+                            <input type="text" class="form-control" id="middleName" name="middleName"
+                                placeholder="Password" />
+                            <label class="ms-2" for="floatingmiddleName">Middle Name</label>
+                        </div>
+                        <div class="form-floating col">
+                            <input type="text" class="form-control" id="lastName" name="lastName"
+                                placeholder="lastName" />
+                            <label class="ms-2" for="floatingPassword">Last Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-floating col">
+                            <select class="form-select" id="baranggayId" name="baranggayId"
+                                aria-label="Floating label select example">
+                                <option value=""> Select baranggay</option>
+                                <option value="7">One</option>
+
+                            </select>
+                            <label class="ms-2" for="floatingSelect">Works with selects</label>
+                        </div>
+
+                        <div class="form-floating col">
+                            <input type="text" class="form-control" id="contactNumber" name="contactNumber"
+                                placeholder="Password" />
+                            <label class="ms-2" for="floatingContactNumber">Contact Number</label>
+                        </div>
+                    </div>
+                    <div class="input-group my-3">
+                        <input type="file" class="form-control" id="imagePath" name="imagePath" accept="image/*"
+                            onchange="loadFile(event)">
+                        <label class="input-group-text" for="inputGroupFile02">Profile Picture</label>
+                    </div>
+                    <div class="text-center justify-content-center align-content-end">
+                        <img src="/img/default_profile.png" id="output" width="300" height="300"
+                            style="border-radius: 50%;" />
+                    </div>
+                    <div class="text-end">
+                        <button class="btn btn-default" type="button" data-bs-dismiss="modal"
+                            aria-label="Close">Cancel</button>
+                        <button type="button" class="btn btn-primary " id="btnPostOwner">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+@section scripts
+{
+    <script>
+        var loadFile = function (event) {
+            var reader = new FileReader();
+            reader.onload = function () {
+                var output = document.getElementById('output');
+                output.src = reader.result;
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        };
+
+
+        $(document).ready(function () {
+            //saving with or without photo
+            $("#btnPostOwner").click(function (e) {
+                e.preventDefault();
+                var formData = new FormData(petOwnerForm);
+                $.ajax({
+                    url: "/api/PetOwnerApi/PostPetOwner",
+                    type: "POST",
+                    data: formData,
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    success: function (data) {
+                        console.log("ok");
+                    },
+                    error: function (data) {
+                        console.log("error");
+                    },
+                });
+            });
+
+            var petOwnerTable = $("#petOwnerTable").DataTable({
+                ajax: {
+                    url: "/api/PetOwnerApi/getPetOwners",
+                    dataSrc: "",
+                },
+                autoWidth: false,
+                pagingType: "simple_numbers",
+                columns: [
+                    {
+                        // display count
+                        data: null,
+                        className: "text-center",
+                        render: function (data, type, row, meta) {
+                            return meta.row + meta.settings._iDisplayStart + 1;
+                        },
+                    },
+                    {
+                        data: "imagePath",
+                        className: "text-center",
+                        render: function (data, type, row) {
+                            if (data == null) {
+                                return '<img src="/img/users.png" width="40" height="40"  style="border-radius: 50%;">';
+                            }
+                            else if (data != null) {
+                                return '<img src="' + data + '" width="40" height="40"   style="border-radius: 50%;">';
+                            }
+                        }
+                    },
+                    {
+                        data: "null",
+                        className: "text-center",
+                        render: function (data, type, row) {
+                            return row.firstName + ' ' + row.middleName + ' ' + row.lastName;
+                        }
+                    },
+                    {
+                        data: "dateAdded",
+                        className: "text-center",
+                    },
+                    {
+                        data: null,
+                        className: "text-center",
+                        render: function (data, row) {
+                            return (
+                                '<button class="btn btn-success btn-sm edit me-1 " data-id="' +
+                                data.id +
+                                '"><i class="bx bx-edit-alt"></i></button>' +
+                                '  <button class="btn btn-danger btn-sm delete" data-id="' +
+                                data.id +
+                                '"><i class="bx bx-trash" ></i> </button>'
+                            );
+                        },
+                    },
+                ],
+                width: "240px",
+            });
+
+        }); 
+    </script>
+}

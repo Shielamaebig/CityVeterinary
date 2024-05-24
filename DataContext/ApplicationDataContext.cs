@@ -21,6 +21,7 @@ namespace CityVeterinary.DataContext
         public DbSet<Vaccine> Vaccines => Set<Vaccine>();
         public DbSet<RecentActivity> RecentActivities => Set<RecentActivity>();
         public DbSet<Vaccinator> Vaccinators => Set<Vaccinator>();
-
+        public DbSet<Appointment> Appointments => Set<Appointment>();
+        public DbSet<Services> Services => Set<Services>();
     }
 }

@@ -1,0 +1,132 @@
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container-fluid m-2">
+    <ul class=" nav nav-fill nav-tabs" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="fill-tab-0" data-bs-toggle="tab" href="#fill-tabpanel-0" role="tab"
+                aria-controls="fill-tabpanel-0" aria-selected="true"> Pet Type </a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="fill-tab-1" data-bs-toggle="tab" href="#fill-tabpanel-1" role="tab"
+                aria-controls="fill-tabpanel-1" aria-selected="false"> Breed Type </a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="fill-tab-2" data-bs-toggle="tab" href="#fill-tabpanel-2" role="tab"
+                aria-controls="fill-tabpanel-2" aria-selected="false"> Services </a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="fill-tab-2" data-bs-toggle="tab" href="#fill-tabpanel-3" role="tab"
+                aria-controls="fill-tabpanel-2" aria-selected="false"> Vaccines </a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="fill-tab-2" data-bs-toggle="tab" href="#fill-tabpanel-4" role="tab"
+                aria-controls="fill-tabpanel-2" aria-selected="false"> Vaccinator </a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="fill-tab-2" data-bs-toggle="tab" href="#fill-tabpanel-5" role="tab"
+                aria-controls="fill-tabpanel-2" aria-selected="false"> Vetirinarian </a>
+        </li>
+    </ul>
+    <div class="tab-content pt-5" id="tab-content">
+        @* PET TYPES *@
+        <div class="tab-pane active" id="fill-tabpanel-0" role="tabpanel" aria-labelledby="fill-tab-0">
+
+            <div class="card border-0 h-100 shadow-lg mb-3 encoder-bg my-5">
+                <div class="card-body">
+                    <div class="justify-content-between mx-4 my-3 align-content-center">
+                        <h2 class="text-discovery fw-semibold mt-2">Pet Types</h2>
+                        <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop"
+                                aria-controls="staticBackdrop">
+                                Add More
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container-fluid">
+                <div class="row g-5">
+                    <div class="card border-0 h-100 shadow-lg bg-white">
+                        <div class="card-body mx-5 my-2">
+                            <div class="table-responsive ">
+                                <table class="table " id="petTypesTable">
+                                    <thead>
+                                        <tr>
+                                            <th>No.</th>
+                                            <th>Types</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @* offCanvas *@
+            <div class="offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
+                aria-labelledby="staticBackdropLabel">
+                <div class="offcanvas-header">
+                    <h4 class="offcanvas-title" id="staticBackdropLabel">Offcanvas</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div>
+                        I will not close if you click outside of me.
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        @* BREED TYPES *@
+        <div class="tab-pane" id="fill-tabpanel-1" role="tabpanel" aria-labelledby="fill-tab-1">
+            <div class="card border-0 h-100 shadow-lg mb-3 encoder-bg my-5">
+                <div class="card-body">
+                    <div class="justify-content-between mx-4 my-3 align-content-center">
+                        <h2 class="text-discovery fw-semibold mt-2">Pet Types</h2>
+                        <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop"
+                                aria-controls="staticBackdrop">
+                                Add More
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="row g-5">
+                    <div class="card border-0 h-100 shadow-lg bg-white">
+                        <div class="card-body mx-5 my-2">
+                            <div class="table-responsive ">
+                                <table class="table " id="breedTable">
+                                    <thead>
+                                        <tr>
+                                            <th>No.</th>
+                                            <th>Breed</th>
+                                            <th>Type</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane" id="fill-tabpanel-2" role="tabpanel" aria-labelledby="fill-tab-2">Tab Tab 3 selected</div>
+    </div>
+</div>
+@section scripts
+{
+                                    <script>
+                                        $(document).ready(function () {
+                                            petTypesComponents();
+                                            breedTypesComponents();
+                                        }); 
+                                    </script>
+}

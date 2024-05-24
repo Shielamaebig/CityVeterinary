@@ -5,6 +5,26 @@
       "PackagePath": "staticwebassets\\CityVeterinary.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\PetOwnersImages\\.jpg",
+      "PackagePath": "staticwebassets\\PetOwnersImages\\.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\PetOwnersImages\\0pnadt2y.cva.jpg",
+      "PackagePath": "staticwebassets\\PetOwnersImages\\0pnadt2y.cva.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\PetOwnersImages\\23b61d2e-cc3f-40cd-95be-03c904a96e18.jpeg",
+      "PackagePath": "staticwebassets\\PetOwnersImages\\23b61d2e-cc3f-40cd-95be-03c904a96e18.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\PetOwnersImages\\3bdd07ea-3ebb-480e-ad6b-b99709d4df90.jpg",
+      "PackagePath": "staticwebassets\\PetOwnersImages\\3bdd07ea-3ebb-480e-ad6b-b99709d4df90.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\PetOwnersImages\\5b8e6dcc-ea08-47ce-80a6-b02faf41df4b.jpg",
+      "PackagePath": "staticwebassets\\PetOwnersImages\\5b8e6dcc-ea08-47ce-80a6-b02faf41df4b.jpg"
+    },
+    {
       "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\css\\animations.css",
       "PackagePath": "staticwebassets\\css\\animations.css"
     },
@@ -97,6 +117,10 @@
       "PackagePath": "staticwebassets\\img\\access.png"
     },
     {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\img\\animals.jpg",
+      "PackagePath": "staticwebassets\\img\\animals.jpg"
+    },
+    {
       "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\img\\blob.svg",
       "PackagePath": "staticwebassets\\img\\blob.svg"
     },
@@ -117,6 +141,10 @@
       "PackagePath": "staticwebassets\\img\\cgpp-2.png"
     },
     {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\img\\cute.jpg",
+      "PackagePath": "staticwebassets\\img\\cute.jpg"
+    },
+    {
       "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\img\\default_profile.png",
       "PackagePath": "staticwebassets\\img\\default_profile.png"
     },
@@ -129,6 +157,10 @@
       "PackagePath": "staticwebassets\\img\\logo.png"
     },
     {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\img\\pet.jpg",
+      "PackagePath": "staticwebassets\\img\\pet.jpg"
+    },
+    {
       "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\img\\petusers.png",
       "PackagePath": "staticwebassets\\img\\petusers.png"
     },
@@ -137,12 +169,20 @@
       "PackagePath": "staticwebassets\\img\\s.png"
     },
     {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\img\\toys.jpg",
+      "PackagePath": "staticwebassets\\img\\toys.jpg"
+    },
+    {
       "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\img\\users.png",
       "PackagePath": "staticwebassets\\img\\users.png"
     },
     {
       "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\img\\wave.svg",
       "PackagePath": "staticwebassets\\img\\wave.svg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\js\\appointment.js",
+      "PackagePath": "staticwebassets\\js\\appointment.js"
     },
     {
       "Id": "C:\\Users\\Admin\\source\\repos\\CityVeterinary\\CityVeterinary\\wwwroot\\js\\bootstrap.bundle.min.js",

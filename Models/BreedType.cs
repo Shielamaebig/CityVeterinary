@@ -7,9 +7,13 @@ namespace CityVeterinary.Models
 {
     public class BreedType
     {
+
         public int Id { get; set; }
         public string? DateAdded { get; set; }
         public virtual PetType? PetType { get; set; }
         public int PetTypeId { get; set; }
+        public string? PetTypeName { get; set; }
+        public string? BreedName { get; set; }
     }
+
 }

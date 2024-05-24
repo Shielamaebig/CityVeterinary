@@ -35,8 +35,8 @@
         <div class="">
 
             <aside class="border-0">
-                <div class="sidebar-pos">
-                    <div class="layout-sidebar" id="sidebar">
+                <div class="sidebar-pos shadow-lg">
+                    <div class="" id="sidebar">
                         <div class="sidenav-top">
                             <div class=" py-4 sidebar-topImage">
                                 <img src="/img/logo.png" alt="" width="40" height="40">
@@ -44,42 +44,180 @@
 
                         </div>
                         @* Web View *@
-                        <ul class="border-0 list-group px-7" style="width:30vw;">
-                            <div class="mt-5" id="sideNav">
-                                <a asp-area="" asp-controller="Home" asp-action="Index"
-                                    class="text-decoration-none side-nav" aria-current="page">
-                                    <li class="side-item sidebar-li pt-1">
-                                        <i class="bx bxs-dashboard icon  me-5 mt-1"></i>
-                                        <span>Dashboard</span>
-                                    </li>
-                                </a>
-                                <a asp-area="" asp-controller="Swagger" asp-action="Index" class="text-decoration-none"
-                                    aria-current="page">
-                                    <li class="side-item sidebar-li pt-1">
-                                        <i class="bx bxs-folder-plus icon  me-5 mt-1"></i>
-                                        <span>Api</span>
-                                    </li>
-                                </a>
+                        <ul class="border-0 list-group px-4" id="myTab">
+                            <div class="mt-5">
+                                <li class="side-item">
+                                    <a asp-area="" asp-controller="Home" asp-action="Index"
+                                        class="text-decoration-none nav-active" aria-current="page">
+                                        <i class="bx bxs-dashboard icon  mx-3"></i>
+                                        <span class="text">Dashboard</span>
+                                    </a>
+
+                                </li>
+                                <li class="side-item" id="link">
+                                    <a asp-area="" asp-controller="Swagger" asp-action="Index"
+                                        class="text-decoration-none nav-active" aria-current="page">
+                                        <i class="bx bxs-folder-plus icon  mx-3"></i>
+                                        <span class="text">Api</span>
+                                    </a>
+
+                                </li>
+                                <li class="side-item">
+                                    <a class="text-decoration-none" data-bs-toggle="collapse"
+                                        href="#collapseExampletools" role="button" aria-expanded="false"
+                                        aria-controls="collapseExample">
+
+                                        <i class=" bx bxs-grid icon  mx-3 "></i>
+                                        <span class="text">Tools</span>
+                                        <i class='bx bx-chevron-down icon ms-5'></i>
+                                    </a>
+                                </li>
+
+                                <div class="collapse mt-3" id="collapseExampletools">
+                                    <div class=" ms-4">
+                                        <ul class="list-group border-0">
+                                            <li class="side-item">
+                                                <a asp-asp-area="" asp-controller="Encoder" asp-action="Index"
+                                                    class="text-decoration-none link" aria-current="page">
+                                                    <i class="bx bxs-group bx-flip-horizontal icon  mx-3 "></i>
+                                                    <span class="text">Encoder</span>
+                                                </a>
+
+                                            </li>
+                                            <li class="side-item">
+                                                <a asp-asp-area="" asp-controller="Baranggay" asp-action="Index"
+                                                    class="text-decoration-none link" aria-current="page">
+                                                    <i class=" bx bxs-buildings icon  mx-3 "></i>
+                                                    <span class="text">Baranggay</span>
+                                                </a>
+
+                                            </li>
+
+                                        </ul>
+
+                                    </div>
+                                </div>
+                                @* <li class="side-item" id="link">
                                 <a asp-asp-area="" asp-controller="Encoder" asp-action="Index"
-                                    class="text-decoration-none" aria-current="page">
-                                    <li class="side-item sidebar-li pt-1">
-                                        <i class="bx bxs-archive icon  me-5 mt-1"></i>
-                                        <span>Encoder</span>
-                                    </li>
+                                class="text-decoration-none nav-active" aria-current="page">
+                                <i class="bx bxs-group bx-flip-horizontal icon mx-3 "></i>
+                                <span class="text">Encoder</span>
                                 </a>
+
+                                </li>
+                                <li class="side-item" id="link">
                                 <a asp-asp-area="" asp-controller="Baranggay" asp-action="Index"
-                                    class="text-decoration-none" aria-current="page">
-                                    <li class="side-item sidebar-li pt-1">
-                                        <i class="bx bxs-archive icon  me-5 mt-1"></i>
-                                        <span>Baranggay</span>
-                                    </li>
+                                class="text-decoration-none nav-active " aria-current="page">
+                                <i class=" bx bxs-buildings icon mx-3 "></i>
+                                <span class="text">Baranggay</span>
                                 </a>
+
+                                </li> *@
+
+
+                                <li class="side-item">
+                                    <a class="text-decoration-none" data-bs-toggle="collapse" href="#collapseExample"
+                                        role="button" aria-expanded="false" aria-controls="collapseExample">
+
+                                        <i class=" bx bxs-grid icon  mx-3 "></i>
+                                        <span class="text">Components</span>
+                                        <i class='bx bx-chevron-down icon ms-5'></i>
+                                    </a>
+                                </li>
+
+                                <div class="collapse mt-3" id="collapseExample">
+                                    <div class=" ms-4">
+                                        <ul class="list-group border-0">
+                                            <li class="side-item">
+                                                <a asp-asp-area="" asp-controller="Components" asp-action="PetTypes"
+                                                    class="text-decoration-none link" aria-current="page">
+                                                    <i class="bx bxs-dog icon mx-3"></i>
+                                                    <span class="text">Pet Type</span>
+                                                </a>
+
+                                            </li>
+                                            <li class="side-item">
+                                                <a asp-asp-area="" asp-controller="Components" asp-action="BreedTypes"
+                                                    class="text-decoration-none link" aria-current="page">
+                                                    <i class="bx bx-list-plus icon mx-3 "></i>
+                                                    <span class="text">Breed Type</span>
+                                                </a>
+
+                                            </li>
+                                            <li class="side-item">
+                                                <a asp-asp-area="" asp-controller="Components" asp-action="ServiceType"
+                                                    class="text-decoration-none link" aria-current="page">
+                                                    <i class="bx bx-task icon mx-3 mt-2"></i>
+                                                    <span class="text">Services Type</span>
+                                                </a>
+
+                                            </li>
+
+                                        </ul>
+
+                                    </div>
+                                </div>
+
+
+                                <li class="side-item sidebar-li">
+                                    <a class="text-decoration-none" data-bs-toggle="collapse" href="#collapseExamplevax"
+                                        role="button" aria-expanded="false" aria-controls="collapseExample">
+                                        <i class=" bx bx-clinic icon mx-3 "></i>
+                                        <span class="text">Vaccine</span>
+                                        <i class='bx bx-chevron-down icon ms-5'></i>
+
+                                    </a>
+                                </li>
+
+                                <div class="collapse mt-3" id="collapseExamplevax">
+                                    <div class=" ms-4">
+                                        <ul class="list-group border-0">
+
+                                            <li class="side-item sidebar-li">
+                                                <a asp-asp-area="" asp-controller="Components" asp-action="VaccineType"
+                                                    class="text-decoration-none link" aria-current="page">
+                                                    <i class="bx bxs-injection icon mx-3 "></i>
+                                                    <span class="text">Vaccine Type</span>
+                                                </a>
+
+                                            </li>
+
+                                            <li class="side-item sidebar-li">
+                                                <a asp-asp-area="" asp-controller="Components" asp-action="Vaccinator"
+                                                    class="text-decoration-none link" aria-current="page">
+                                                    <i class="bx bx-plus-medical icon mx-3 "></i>
+                                                    <span class="text">Vaccinator</span>
+                                                </a>
+
+                                            </li>
+                                            <li class="side-item sidebar-li">
+                                                <a asp-asp-area="" asp-controller="Components" asp-action="Veterinarian"
+                                                    class="text-decoration-none link" aria-current="page">
+                                                    <i class="bx bx-plus-medical icon mx-3 "></i>
+                                                    <span class="text">Veterinarian</span>
+                                                </a>
+
+                                            </li>
+
+                                        </ul>
+
+                                    </div>
+                                </div>
+
+                                <li class="side-item" id="link">
+                                    <a asp-asp-area="" asp-controller="PetOwners" asp-action="Index"
+                                        class="text-decoration-none nav-active " aria-current="page">
+                                        <i class=" bx bxs-buildings icon  mx-3 "></i>
+                                        <span class="text">Pet Owners</span>
+                                    </a>
+
+                                </li>
+
                             </div>
                         </ul>
                         @* Web End View *@
                     </div>
                 </div>
-
             </aside>
 
 
@@ -87,9 +225,6 @@
                 <div class="layout-page">
 
                     <nav class="navbar layout-navbar navbar-expand-lg d-flex">
-                        <div class="nav__toggle ms-4" id="side-toggle">
-                            <i class='bx bx-left-arrow-alt'></i>
-                        </div>
                         <div class="container-fluid">
                             <div class="openbtn mt-2" data-bs-toggle="collapse" data-bs-target="#navbarExample"
                                 aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
@@ -109,14 +244,14 @@
                                 <!-- mobile nav -->
                                 <div class="mobile-nav-space">
                                     <ul class="navbar-nav me-auto mb-0 px-5" id="mobile-nav">
-                                        <a href="#" class="text-decoration-none mb-3" aria-current="page">
+                                        <a href="#" class="text-decoration-none mb-3 link" aria-current="page">
                                             <li class="">
                                                 <i class="bx bxs-dashboard text-white me-3"></i>
                                                 <span class="text-white">Dashboaasfasfrd</span>
                                             </li>
                                         </a>
-                                        <a asp-controller="Swagger" asp-action="Index" class="text-decoration-none mb-3"
-                                            aria-current="page">
+                                        <a asp-controller="Swagger" asp-action="Index"
+                                            class="text-decoration-none link mb-3" aria-current="page">
                                             <li class="">
                                                 <i class="bx bxs-folder-plus text-white me-3"></i>
                                                 <span class="text-white">Api</span>
@@ -207,11 +342,11 @@
                 <!--end main content -->
             </main>
         </div>
-        <div class="footer">
-            <div class="">
+        @* <div class="footer pt-10">
+        <div class="">
 
-            </div>
         </div>
+        </div> *@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"

@@ -1,0 +1,179 @@
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Register.cshtml";
+}
+
+<div id="container" class="container px-5 mt-4">
+
+    <div class="progress px-1" style="height: 3px;">
+        <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0"
+            aria-valuemax="100"></div>
+    </div>
+    <div class="step-container d-flex justify-content-between">
+        <div class="step-circle">1</div>
+        <div class="step-circle">2</div>
+        <div class="step-circle">3</div>
+        <div class="step-circle">4</div>
+    </div>
+
+    <form id="multi-step-form">
+
+        <div class="step step-1">
+            <!-- Step 1 form fields Pet -->
+            <h3 class="text-center text-uppercase">STEP 1</h3>
+            <h4 class="text-center">ENTER YOUR INFORMATION</h4>
+            <div class="row">
+                <div class="col-md-4 mt-2">
+                    <div class="form-group">
+                        <label for="field" class="hidden-md">First Name</label>
+                        <input type="text" class="form-control" name="firstName" id="firstName" aria-label="Date">
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <label for="field" class="hidden-md">Middle Name</label>
+                    <input type="text" class="form-control" name="middleName" id="middleName" aria-label="Date">
+                </div>
+                <div class="col-md-4 mt-2">
+                    <label for="field" class="hidden-md">Last Name</label>
+                    <input type="text" class="form-control" name="lastName" id="lastName" aria-label="Date">
+                </div>
+                <div class="col-md-6  mt-2">
+                    <label for="field1" class="form-label">Contact Number:</label>
+                    <input type="number" class="form-control contact-input" id="contacNumber" name="contacNumber"
+                        max="11">
+                </div>
+                <div class="col-md-6  mt-2">
+                    <label for="field1" class="form-label">Baranggay</label>
+                    <select id="baranggayId" name="baranggayId" class="form-select">
+                        <option value="-1">Select Baranggay</option>
+                    </select>
+                </div>
+
+
+            </div>
+
+            <button type="button" class="btn btn-primary next-step mt-4">Next</button>
+        </div>
+
+        <div class="step step-2">
+            <!-- Step 2 form Pet here -->
+            <h3 class="text-center text-uppercase">Step 2</h3>
+            <h4 class="text-center">TELL US ABOUT YOUR PET</h4>
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <label for="field" class="hidden-md">Pet Name</label>
+                    <input type="text" id="petName" name="petName" class="form-control" />
+                </div>
+                <div class="col-md-4">
+                    <label for="field" class="hidden-md">Type of Pet</label>
+                    <select id="petTypeId" name="petTypeId" class="form-select">
+                        <option value="-1">Select Pet</option>
+                    </select>
+                </div>
+                @* <div class="col-4">
+                <div class="form-check form-check-inline mt-8 ms-5">
+                <input class="form-check-input" type="radio" name="male" id="male"
+                value="Male" />
+                <label class="form-check-label" for="inlineRadio1">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="female" id="female"
+                value="Female" />
+                <label class="form-check-label" for="inlineRadio2">Female</label>
+                </div>
+                </div> *@
+                <div class="col-md-4">
+                    <label for="field" class="hidden-md">Gender</label>
+                    <select id="gender" name="gender" class="form-select">
+                        <option value="-1">Select Gender</option>
+                        <option value="-1">Male</option>
+                        <option value="-1">Female</option>
+
+                    </select>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="form-group">
+                        <label for="field" class="hidden-md">Date of Birth</label>
+                        <input type="date" class="form-control" name="petDateOfBirth" id="petDateOfBirth"
+                            aria-label="Date">
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <label for="field" class="hidden-md">Breed</label>
+                    <select id="breedTypeId" name="breedTypeId" class="form-select">
+                        <option value="-1">Select Breed</option>
+                    </select>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <label for="field" class="hidden-md">Markings</label>
+                    <input type="text" class="form-control" name="markings" id="markings" aria-label="Date">
+                </div>
+
+
+            </div>
+            <button type="button" class="btn btn-primary prev-step ">Previous</button>
+            <button type="button" class="btn btn-primary next-step">Next</button>
+        </div>
+
+        <div class="step step-3">
+            <!-- Step 2 form Pet here -->
+            <h3 class="text-center text-uppercase">Step 3</h3>
+            <div class="row">
+                <div class="col-md-4 mt-2 mb-5">
+                    <div class="form-group">
+                        <label for="field" class="hidden-md">How can we help your <span id="pet">(Pet
+                                Name)</span></label>
+                        <select id="servicesId" name="servicesId" class="form-select">
+                            <option value="-1">Select Reason</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <h5>Select Date</h5>
+                    <div id="calendar"> </div>
+                </div>
+            </div>
+            <div class="mt-5">
+                <button type="button" class="btn btn-primary prev-step ">Previous</button>
+                @* <button type="submit" class="btn btn-success">Submit</button> *@
+                <button type="button" class="btn btn-success next-step ">Submit</button>
+            </div>
+
+        </div>
+
+        <div class="step step-4">
+            <!-- Step 3 form fields here -->
+            <h3 class="text-center text-uppercase">Step 4</h3>
+
+            <button type="button" class="btn btn-primary prev-step">Previous</button>
+        </div>
+
+
+    </form>
+</div>
+
+@section scripts
+{
+    <script>
+
+
+        $(document).ready(function () {
+            Appointment();
+            $("#calendar").datepicker({ dateFormat: "yy-mm-dd" });
+            $("#calendar").on("change", function () {
+                var selected = $(this).val();
+                console.log(selected);
+            });
+            $('.contact-input').unbind('keyup change input paste').bind('keyup change input paste', function (e) {
+                var $this = $(this);
+                var val = $this.val();
+                var valLength = val.length;
+                var maxCount = $this.attr('max');
+                if (valLength > maxCount) {
+                    $this.val($this.val().substring(0, maxCount));
+                }
+            });
+        }); 
+    </script>
+}
