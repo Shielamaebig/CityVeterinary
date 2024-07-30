@@ -14,8 +14,8 @@ namespace CityVeterinary.AutoMapper
             CreateMap<Baranggay, BaranggayDto>().ReverseMap();
             CreateMap<Appointment, AppointmentDto>().ReverseMap();
             CreateMap<PetType, PetTypeDto>().ReverseMap();
-            CreateMap<PetOwner, PetOwnerDto>().ReverseMap();
-
+            CreateMap<PetOwner, PetOwnerDto>().ReverseMap();    
+            CreateMap<PetOwner, PetInfoDto>().ReverseMap();
         }
     }
 

@@ -13,9 +13,9 @@ namespace CityVeterinary.Dto
         public string? MiddleName { get; set; }
         public string? LastName { get; set; }
         public string? FullName { get; set; }
+                public string? BaranggayName { get; set; }
+
         public string? ContactNumber { get; set; }
         public int BaranggayId { get; set; }
-        public string? FileExtension { get; set; }
-        public IFormFile? ImagePath { get; set; }
     }
 }

@@ -7,7 +7,7 @@ using System.Text.RegularExpressions;
 
 namespace CityVeterinary.Models
 {
-public static class UploadImage
+    public static class UploadImage
     {
         
     public const int ImageMinimumBytes = 512;

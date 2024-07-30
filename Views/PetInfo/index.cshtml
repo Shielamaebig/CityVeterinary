@@ -1,0 +1,673 @@
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="card border-0 h-100 shadow-lg encoder-bg">
+        <div class="card-body">
+            <div class="d-flex justify-content-between mx-4 my-3 align-content-center">
+                <h3 class="text-discovery fw-semibold mt-2">Pet Information</h3>
+
+            </div>
+        </div>
+    </div>
+    <div class="card border-0 h-100 shadow-lg bg-white  mt-4">
+        <div class="card-body">
+            <form id="petInfoForm" name="petInfoForm" enctype="multipart/form-data">
+                <div class="row">
+                    <div class=" col mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Pet Owner</label>
+                        <select class="form-select" id="petOwnerId" name="petOwnerId"
+                            aria-label="Floating label select example" style="height: 30px;">
+
+                            <option value="-1" class="new">Select Owner</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class=" mb-3 col">
+                        <label class="ms-2" for="floatingInput">Name</label>
+
+                        <input type="text" class="form-control" id="petName" name="petName" />
+                    </div>
+                    <div class=" col">
+                        <label class="ms-2" for="floatingSelect">Gender</label>
+                        <select class="form-select" id="gender" name="gender"
+                            aria-label="Floating label select example">
+                            <option value="Female">Female</option>
+                            <option value="Male">Male</option>
+                        </select>
+
+                    </div>
+                    <div class=" col">
+                        <label class="ms-2" for="floatingSelect">Pet Type</label>
+
+                        <select class="form-select" id="petTypeId" name="petTypeId"
+                            aria-label="Floating label select example">
+                            <option value=" ">Select Value</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class=" col">
+                        <label class="ms-2" for="floatingSelect">What breed</label>
+
+                        <select class="form-select" id="breedTypeId" name="breedTypeId"
+                            aria-label="Floating label select example">
+                            <option value="">Select Value</option>
+                        </select>
+                    </div>
+                    <div class=" col">
+                        <label class="ms-2" for="floatingContactNumber">Markings</label>
+
+                        <input type="text" class="form-control" id="markings" name="markings" />
+                    </div>
+                    <div class=" col">
+                        <label class="ms-2" for="floatingSelect">What is the species of pet?</label>
+
+                        <select class="form-select" id="species" name="species"
+                            aria-label="Floating label select example">
+                            <option value="Canine">Canine</option>
+                            <option value="Feline">Feline</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class=" mb-3 col">
+                        <label class="ms-2" for="floatingInput">Date Of Birth</label>
+
+                        <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth" />
+                    </div>
+                    <div class=" mb-3 col">
+                        <label class="ms-2" for="floatingInput">Tag Number</label>
+
+                        <input type="text" class="form-control" id="tagNumber" name="tagNumber" />
+                    </div>
+                    <div class=" mb-3 col">
+                        <label class="ms-2" for="floatingInput">OR number</label>
+
+                        <input type="text" class="form-control" id="orNumber" name="orNumber" />
+                    </div>
+                </div>
+                <div class="input-group my-3">
+                    <label class="input-group-text" for="inputGroupFile02">Profile Picture</label>
+
+                    <input type="file" class="form-control" id="imagePath" name="imagePath" accept="image/*"
+                        onchange="loadFile(event)">
+                </div>
+                <div class="text-center justify-content-center align-content-end">
+                    <img src="/img/default_profile.png" id="output" width="150" height="150"
+                        style="border-radius: 50%;" />
+                </div>
+                <div class="text-end">
+
+                    <button type="submit" class="btn btn-primary btnPostOwner" id="btnPostInfo">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="card border-0 h-100 shadow-lg bg-white petownerbg mt-4">
+        <div class="card-body">
+            <div class="row">
+                <div class="table-responsive">
+                    <table class="table " id="petInfoTable">
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Profile</th>
+                                <th>Date of Birth</th>
+                                <th>Pet Owner</th>
+                                <th>Pet Name</th>
+                                <th>Contact No.</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* modal add Encoder UPdate *@
+<div class="modal fade" id="UpdatePetInfoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="px-3">
+                <div class="modal-header">
+                    <div class="align-content-start">
+                        <h5 class="modal-title title" id="staticBackdropLabel">Update Pet info
+                            <i class="bx bx-plus"></i>
+                        </h5>
+                    </div>
+                    <div class="bg-body-secondary p-2 btn-modal-close shadow">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <form id="UpdatepetInfoForm" name="petInfoForm" enctype="multipart/form-data">
+                    <div class="align-content-start">
+                        <h5 class="modal-title title" id="staticBackdropLabel">
+                            <div class="text-center justify-content-center align-items-center d-flex">
+                                <img id="petImage" width="90" height="90" style="border-radius: 50%;" />
+                                <h5 id="name" class="ms-5"> </h5>
+                            </div>
+
+                        </h5>
+                    </div>
+                    <div class="row">
+
+                        <div class=" col mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Pet Owner</label>
+                            <select class="form-select petselect" id="petOwnerId" name="petOwnerId"
+                                aria-label="Floating label select example">
+
+                                <option value="-1" class="new">Select Owner</option>
+                            </select>
+                        </div>
+
+                        @* <div class=" col">
+                        <label class="ms-2" for="floatingSelect">Pet Type</label>
+
+                        <input class="form-control" id="petOwnerName" name="petOwnerName" readonly />
+
+                        </div> *@
+
+                    </div>
+                    <div class="row">
+                        <div class=" mb-3 col">
+                            <label class="ms-2" for="floatingInput">Name</label>
+
+                            <input type="text" class="form-control" id="petName" name="petName" />
+                        </div>
+                        <div class=" col">
+                            <label class="ms-2" for="floatingSelect">Gender</label>
+                            <select class="form-select" id="gender" name="gender"
+                                aria-label="Floating label select example">
+                                <option value="Female">Female</option>
+                                <option value="Male">Male</option>
+                            </select>
+
+                        </div>
+                        <div class=" col">
+                            <label class="ms-2" for="floatingSelect">Pet Type</label>
+
+                            <select class="form-select" id="petTypeId" name="petTypeId"
+                                aria-label="Floating label select example">
+                                <option value=" ">Select Value</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class=" col">
+                            <label class="ms-2" for="floatingSelect">What breed</label>
+
+                            <select class="form-select" id="breedTypeId" name="breedTypeId2"
+                                aria-label="Floating label select example">
+                            </select>
+                        </div>
+                        <div class=" col">
+                            <label class="ms-2" for="floatingContactNumber">Markings</label>
+
+                            <input type="text" class="form-control" id="markings" name="markings" />
+                        </div>
+                        <div class=" col">
+                            <label class="ms-2" for="floatingSelect">What is the species of pet?</label>
+
+                            <select class="form-select" id="species" name="species"
+                                aria-label="Floating label select example">
+                                <option value="Canine">Canine</option>
+                                <option value="Feline">Feline</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class=" mb-3 col">
+                            <label class="ms-2" for="floatingInput">Date Of Birth</label>
+
+                            <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth" />
+                        </div>
+
+                        <div class=" mb-3 col">
+                            <label class="ms-2" for="floatingInput">Tag Number</label>
+
+                            <input type="text" class="form-control" id="tagNumber" name="tagNumber" />
+                        </div>
+                        <div class=" mb-3 col">
+                            <label class="ms-2" for="floatingInput">OR number</label>
+
+                            <input type="text" class="form-control" id="orNumber" name="orNumber" />
+                        </div>
+                    </div>
+                    <div class="input-group my-3">
+                        <label class="input-group-text" for="inputGroupFile02">Profile Picture</label>
+
+                        <input type="file" class="form-control" id="imagePath" name="imagePath" accept="image/*"
+                            onchange="loadFile(event)">
+                    </div>
+                    <div class="text-center justify-content-center align-content-end">
+                        <img src="/img/default_profile.png" id="output2" width="150" height="150"
+                            style="border-radius: 50%;" />
+                    </div>
+                    <input type="hidden" class="form-control" id="id" name="id" />
+
+                    <div class="text-end">
+                        <button class="btn btn-default" type="button" data-bs-dismiss="modal"
+                            aria-label="Close">Cancel</button>
+                        <button type="button" class="btn btn-primary btnPostOwner" id="btnUpdatePetInfo">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="deleteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+                    <form id="vaxDelete">
+                        <div class="p-5">
+                            <div class="d-flex justify-content-center ">
+                                <div class="m-0 p-0">
+                                    <div class=" icon_delete p-4">
+                                        <i class='bx bx-error icon-danger text-center fs-1 '></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <p class=" mt-2 mb-0 text-black fs-2 text-center fw-semibold">Are you sure?</p>
+                                <p class=" mb-0 delete-text text-center"> This action cannot be undone. All values
+                                    associated with
+                                    this fiels
+                                    will be
+                                    lost:
+                                </p>
+                                <p class=" my-2 fs-6 fw-semibold text-center text-black" id="deleteName">
+                                </p>
+                            </div>
+                            <input type="hidden" id="fullName" name="fullName" />
+                            <input type="hidden" id="id" name="id" />
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-danger deleteBtn" type="button">Delete field</button>
+                                <button class="btn btn-default " type="button" data-bs-dismiss="modal"
+                                    aria-label="Close">Cancel</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section scripts
+{
+    <script>
+        var loadFile = function (event) {
+            var reader = new FileReader();
+            reader.onload = function () {
+                var output = document.getElementById('output');
+                output.src = reader.result;
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        };
+
+        var loadFile = function (event) {
+            var reader = new FileReader();
+            reader.onload = function () {
+                var output = document.getElementById('output2');
+                output.src = reader.result;
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        };
+        $(document).ready(function () {
+            var petInfoTable = $("#petInfoTable").DataTable({
+                ajax: {
+                    url: "/api/PetInfoApi/getPetInfo",
+                    dataSrc: "",
+                },
+                autoWidth: false,
+                pagingType: "simple_numbers",
+                columns: [
+                    {
+                        // display count
+                        data: null,
+                        className: "text-center fs-5",
+                        render: function (data, type, row, meta) {
+                            return meta.row + meta.settings._iDisplayStart + 1;
+                        },
+                    },
+                    {
+                        data: "imagePath",
+                        className: "text-center fs-5",
+                        render: function (data, type, row) {
+
+                            if (data == null) {
+                                return '<img src="/img/users.png" class="avatar avatar-lg">';
+                            }
+                            else if (data != null) {
+                                return '<img src="' + data + '"  class="avatar avatar-lg">';
+                            }
+
+                        }
+                    },
+                    {
+                        data: "dateOfBirth",
+                        className: "text-center fs-5",
+                    },
+                    {
+                        data: "null",
+                        className: "text-center fs-5",
+                        render: function (data, type, row) {
+                            return row.petOwner.firstName + ' ' + row.petOwner.middleName + ' ' + row.petOwner.lastName;
+                        }
+                    },
+                    {
+                        data: "petName",
+                        className: "text-center fs-5",
+
+                    },
+                    {
+                        data: "petOwner.contactNumber",
+                        className: "text-center fs-5",
+
+                    },
+
+                    {
+                        data: null,
+                        className: "text-center",
+                        render: function (data, row) {
+                            return (
+                                '<button class="btn btn-success btn-sm edit me-1 " data-id="' +
+                                data.id +
+                                '"><i class="bx bx-edit-alt"></i></button>' +
+                                '  <button class="btn btn-danger btn-sm delete" data-id="' +
+                                data.id +
+                                '"><i class="bx bx-trash" ></i> </button>'
+                            );
+                        },
+                    },
+                ],
+                width: "240px",
+            });
+
+            $("#petOwnerId").select2({
+                width: '100%',
+                theme: 'bootstrap-5'
+            });
+
+
+            $.ajax({
+                type: "GET",
+                url: "/api/PetTypeApi/getPetTypes",
+
+                success: function (data) {
+                    var html = '<option value="">Select Value</option>';
+                    $.each(data, function (i, item) {
+                        html += '<option value="' + item.id + '">' + item.petTypeName + "</option>";
+                    });
+                    $("select[name=petTypeId]").html(html);
+                    // render divisionsId2 select
+                    $("select[name=petTypeId]").on("change", function () {
+                        var petTypeId = $("select[name=petTypeId]").val();
+                        $.ajax({
+                            type: "GET",
+                            url: "/api/BreedApi/getBreedbyType/" + petTypeId,
+                            headers: {
+                                Authorization: "Bearer " + localStorage.getItem("access_token"),
+                            },
+                            success: function (data) {
+                                var html = '<option value="">Select Value</option>';
+                                $.each(data, function (i, item) {
+                                    html +=
+                                        '<option value="' + item.id + '">' + item.breedName + "</option>";
+                                });
+                                $("select[name=breedTypeId]").html(html);
+                            },
+                        });
+                    });
+                },
+            });
+
+
+
+            $('.owner').select2();
+            $.ajax({
+                type: "GET",
+                url: "/api/PetOwnerApi/getPetOwners",
+                success: function (data) {
+                    $.each(data, function (index, value) {
+                        $("select[name=petOwnerId]").append(
+                            '<option value="' + value.id + '">' + value.firstName + " " + value.middleName + " " + value.lastName + "</option>",
+                        );
+                    });
+                },
+            });
+
+            //saving with or without photo
+            $("#petInfoForm").submit(function (e) {
+                e.preventDefault();
+                var formData2 = new FormData(this);
+                $.ajax({
+                    url: "/api/PetInfoApi/postPetInfo",
+                    type: "POST",
+                    data: formData2,
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    success: function (data) {
+                        new Noty({
+                            theme: "mint",
+                            text: "Successfully Save!",
+                            type: "info",
+                            layout: "topRight",
+                            timeout: 1500,
+                        }).show();
+                        setTimeout(function () {
+                            $("#UpdatePetInfoModal").modal("hide");
+                            petInfoTable.ajax.reload();
+                        }, 1300);
+                    },
+                    error: function (data) {
+                        new Noty({
+                            theme: "mint",
+                            text: "Something went wrong!",
+                            type: "error",
+                            layout: "topRight",
+                            timeout: 1500,
+                        }).show();
+                        setTimeout(function () {
+                            $("#UpdatePetInfoModal").modal("hide");
+                            petInfoTable.ajax.reload();
+                        }, 1300);
+
+                    },
+                });
+            });
+
+            $.ajax({
+                type: "GET",
+                url: "/api/PetOwnerApi/getPetOwners",
+                success: function (data) {
+                    $.each(data, function (index, value) {
+                        $("select[name=petOwnerId2]").append(
+                            '<option value="' + value.id + '">' + value.firstName + " " + value.middleName + " " + value.lastName + "</option>",
+                        );
+                    });
+                },
+            });
+
+
+            $("#petOwnerId2").select2({
+                width: '100%',
+                dropdownParent: $('#UpdatePetInfoModal .modal-content')
+            });
+
+            $("#petInfoTable").on("click", ".edit", function () {
+                var id = $(this).attr("data-id");
+                $.ajax({
+                    type: "GET",
+                    url: "/api/PetInfoApi/getPetInfobyId/" + id,
+                    success: function (data) {
+                        $("#UpdatePetInfoModal").modal("show");
+
+                        $("#UpdatePetInfoModal")
+                            .find("select[name=gender]")
+                            .val(data.gender)
+                            .append(
+                                '<option value="' +
+                                data.gender +
+                                '">' +
+                                data.gender +
+                                "</option>"
+                            );
+
+                        $("#UpdatePetInfoModal")
+                            .find("select[name=breedTypeId2]")
+                            .val(data.breedTypeId)
+                            .append(
+                                '<option value="' +
+                                data.breedTypeId +
+                                '">' +
+                                data.breedTypeName +
+                                "</option>"
+                            );
+                        $("#UpdatePetInfoModal")
+                            .find("select[name=species]")
+                            .val(data.species)
+                            .append(
+                                '<option value="' +
+                                data.species +
+                                '">' +
+                                data.species +
+                                "</option>"
+                            );
+
+                        $("#UpdatepetInfoForm").find("input[name=id]").val(data.id);
+                        $("#UpdatepetInfoForm").find("input[name=petName]").val(data.petName);
+                        $("#UpdatepetInfoForm").find("input[name=markings]").val(data.markings);
+                        $("#UpdatepetInfoForm").find("input[name=tagNumber]").val(data.tagNumber);
+                        $("#UpdatepetInfoForm").find("input[name=orNumber]").val(data.orNumber);
+                        $("#UpdatepetInfoForm").find("input[name=petOwnerName]").val(data.petOwnerName);
+                        $("#UpdatepetInfoForm").find("select[name=petTypeId]").val(data.petTypeId);
+                        $("#UpdatepetInfoForm").find("select[name=petOwnerId]").val(data.petOwnerId);
+
+                        $("#UpdatepetInfoForm").find("input[name=dateOfBirth]").val(data.dateOfBirth);
+                        if (data.imagePath == null) {
+                            $("#UpdatepetInfoForm").find("#petImage").attr("src", "/img/users.png");
+                        }
+                        else {
+                            $("#UpdatepetInfoForm").find("#petImage").attr("src", "" + data.imagePath);
+
+                        }
+
+                    },
+                });
+            });
+            //var formData =
+            //  $(this).serialize() + "&departmentsId=" + depId + "&divisionsId=" + divId;
+            $("#btnUpdatePetInfo").click(function (e) {
+                e.preventDefault();
+                var id = $("#UpdatepetInfoForm").find("input[name=id]").val();
+                var formData = new FormData(UpdatepetInfoForm);
+                $.ajax({
+                    url: "/api/PetInfoApi/PutPetInfo/" + id,
+                    type: "PUT",
+                    data: formData,
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    success: function (data) {
+                        new Noty({
+                            theme: "mint",
+                            text: "Successfully Save!",
+                            type: "info",
+                            layout: "topRight",
+                            timeout: 1500,
+                        }).show();
+                        setTimeout(function () {
+                            $("#UpdatePetInfoModal").modal("hide");
+                            petInfoTable.ajax.reload();
+                        }, 1300);
+                    },
+                    error: function (data) {
+                        new Noty({
+                            theme: "mint",
+                            text: "Something went wrong!",
+                            type: "error",
+                            layout: "topRight",
+                            timeout: 1500,
+                        }).show();
+                        setTimeout(function () {
+
+                            petInfoTable.ajax.reload();
+                        }, 1300);
+                    },
+                });
+            });
+            //GET BY ID FOR DELETE
+            $("#petInfoTable").on("click", ".delete", function () {
+                var id = $(this).attr("data-id");
+                $.ajax({
+                    type: "GET",
+                    url: "/api/PetInfoApi/getPetInfobyId/" + id,
+                    success: function (data) {
+                        $("#deleteModal").modal("show");
+                        $("#vaxDelete").find("input[name=id]").val(data.id);
+                        $("#vaxDelete").find("input[name=fullName]").val(data.petName);
+                        var Ename = $("#vaxDelete").find("input[name=fullName]").attr("value");
+                        console.log(JSON.stringify(Ename));
+                        $("#deleteName").text(Ename);
+                    },
+                });
+            });
+            //DELETE
+            $("#deleteModal").on("click", ".deleteBtn", function () {
+                var id = $("#vaxDelete").find("input[name=id]").val();
+                var valdatas = {
+                    id: id,
+                };
+                $.ajax({
+                    type: "DELETE",
+                    url: "/api/PetInfoApi/deleteData/" + id,
+                    data: valdatas,
+                    success: function (data) {
+                        new Noty({
+                            theme: "mint",
+                            text: "Successfully Delete field!",
+                            type: "info",
+                            layout: "topRight",
+                            timeout: 1500,
+                        }).show();
+                        setTimeout(function () {
+                            $("#deleteModal").modal("hide");
+                            petInfoTable.ajax.reload();
+                        }, 1300);
+                    },
+                    error: function (data) {
+                        new Noty({
+                            theme: "mint",
+                            text: "Something went wrong",
+                            type: "info/information",
+                            layout: "topRight",
+                            timeout: 1500,
+                        }).show();
+                        setTimeout(function () {
+                            $("#deleteModal").modal("hide");
+                            petInfoTable.ajax.reload();
+                        }, 1300);
+                    },
+                });
+            });
+        }); 
+    </script>
+}

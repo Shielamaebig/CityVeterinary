@@ -7,243 +7,148 @@
         <div class="card-body">
             <div class="d-flex justify-content-between mx-4 my-3 align-content-center">
                 <h3 class="text-discovery fw-semibold mt-2">Pet Owner</h3>
-                <button type="button" class="btn btn-light btn-sm rounded-3" data-bs-toggle="modal"
-                    data-bs-target="#AddPetOwnersModal">
-                    <i class='bx bx-user-plus fs-4 '></i></button>
+
             </div>
         </div>
     </div>
-    <ul class="nav nav-tabs mt-4 ms-4 mb-3" role="tablist">
-        <li class="nav-item" role="presentation">
-            <a class="nav-link active" id="icon-tab-0" data-bs-toggle="tab" href="#icon-tabpanel-0" role="tab"
-                aria-controls="icon-tabpanel-0" aria-selected="true"><i class='bx bx-list-ul'></i> </a>
-        </li>
-        <li class="nav-item" role="presentation">
-            <a class="nav-link" id="icon-tab-1" data-bs-toggle="tab" href="#icon-tabpanel-1" role="tab"
-                aria-controls="icon-tabpanel-1" aria-selected="false"> <i class='bx bxs-grid-alt'></i> </a>
-        </li>
 
-    </ul>
-    <div class="card border-0 h-100 shadow-lg bg-white petownerbg">
+    <div class="card border-0 h-100 shadow-lg bg-white  mt-4">
         <div class="card-body">
-            <div class="tab-content" id="tab-content">
-                @* GridTable *@
-                <div class="tab-pane active" id="icon-tabpanel-0" role="tabpanel" aria-labelledby="icon-tab-0">
-                    <div class="row">
-                        <div class="table-responsive">
-                            <table class="table " id="petOwnerTable">
-                                <thead>
-                                    <tr>
-                                        <th>No.</th>
-                                        <th>Profile</th>
-                                        <th>Name</th>
-                                        <th>Date Added</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
+            <form id="petOwnerForm" name="petOwnerForm" enctype="multipart/form-data">
+                <div class="row">
+                    <div class=" mb-3 col">
+                        <label class="ms-2" for="floatingInput">First Name</label>
+                        <input type="text" class="form-control" id="firstName" name="firstName" />
+
+                    </div>
+                    <div class=" col">
+                        <label class="ms-2" for="floatingmiddleName">Middle Name</label>
+                        <input type="text" class="form-control" id="middleName" name="middleName" />
+
+                    </div>
+                    <div class=" col">
+                        <label class="ms-2" for="floatingPassword">Last Name</label>
+                        <input type="text" class="form-control" id="lastName" name="lastName" />
+
                     </div>
                 </div>
+                <div class="row">
+                    <div class=" col">
+                        <label class="ms-2" for="">Select Baranggay</label>
+                        <select class="form-select bgyselect2" id="baranggayId" name="baranggayId"
+                            aria-label="Floating label select example">
+                            <option value=""> Select baranggay</option>
 
-                <div class="tab-pane" id="icon-tabpanel-1" role="tabpanel" aria-labelledby="icon-tab-1">
-                    <div class="row g-5">
-                        <div class="input-group input-group-prefix">
-                            <input type="text" id="search-input" name="search-input"
-                                class="form-control bg-transparent py-3" placeholder="Search documents">
-                            <label class="input-group-text">
-                                <i class=" bx bx-search-alt"></i>
-                            </label>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-header d-flex align-items-center border-bottom">
-                                    <span class="avatar text-bg-primary avatar-lg fs-5">R</span>
-                                    <div class="ms-3">
-                                        <h6 class="mb-0 fs-sm">Special title treatment</h6>
-                                        <span class="text-muted fs-sm">September 14, 2022</span>
-                                    </div>
-                                    <button class="btn text-muted ms-auto" type="btn"><i
-                                            class="fas fa-ellipsis-v"></i></button>
-                                </div>
-                                <div class="card-body">
-                                    With supporting text below as a natural lead-in to additional content.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-header d-flex align-items-center border-bottom">
-                                    <span class="avatar text-bg-primary avatar-lg fs-5">R</span>
-                                    <div class="ms-3">
-                                        <h6 class="mb-0 fs-sm">Special title treatment</h6>
-                                        <span class="text-muted fs-sm">September 14, 2022</span>
-                                    </div>
-                                    <button class="btn text-muted ms-auto" type="btn"><i
-                                            class="fas fa-ellipsis-v"></i></button>
-                                </div>
-                                <div class="card-body">
-                                    With supporting text below as a natural lead-in to additional content.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-header d-flex align-items-center border-bottom">
-                                    <span class="avatar text-bg-primary avatar-lg fs-5">R</span>
-                                    <div class="ms-3">
-                                        <h6 class="mb-0 fs-sm">Special title treatment</h6>
-                                        <span class="text-muted fs-sm">September 14, 2022</span>
-                                    </div>
-                                    <button class="btn text-muted ms-auto" type="btn"><i
-                                            class="fas fa-ellipsis-v"></i></button>
-                                </div>
-                                <div class="card-body">
-                                    With supporting text below as a natural lead-in to additional content.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-header d-flex align-items-center border-bottom">
-                                    <span class="avatar text-bg-primary avatar-lg fs-5">R</span>
-                                    <div class="ms-3">
-                                        <h6 class="mb-0 fs-sm">Special title treatment</h6>
-                                        <span class="text-muted fs-sm">September 14, 2022</span>
-                                    </div>
-                                    <button class="btn text-muted ms-auto" type="btn"><i
-                                            class="fas fa-ellipsis-v"></i></button>
-                                </div>
-                                <div class="card-body">
-                                    With supporting text below as a natural lead-in to additional content.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-header d-flex align-items-center border-bottom">
-                                    <span class="avatar text-bg-primary avatar-lg fs-5">R</span>
-                                    <div class="ms-3">
-                                        <h6 class="mb-0 fs-sm">Special title treatment</h6>
-                                        <span class="text-muted fs-sm">September 14, 2022</span>
-                                    </div>
-                                    <button class="btn text-muted ms-auto" type="btn"><i
-                                            class="fas fa-ellipsis-v"></i></button>
-                                </div>
-                                <div class="card-body">
-                                    With supporting text below as a natural lead-in to additional content.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-header d-flex align-items-center border-bottom">
-                                    <span class="avatar text-bg-primary avatar-lg fs-5">R</span>
-                                    <div class="ms-3">
-                                        <h6 class="mb-0 fs-sm">Special title treatment</h6>
-                                        <span class="text-muted fs-sm">September 14, 2022</span>
-                                    </div>
-                                    <button class="btn text-muted ms-auto" type="btn"><i
-                                            class="fas fa-ellipsis-v"></i></button>
-                                </div>
-                                <div class="card-body">
-                                    With supporting text below as a natural lead-in to additional content.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-header d-flex align-items-center border-bottom">
-                                    <span class="avatar text-bg-primary avatar-lg fs-5">R</span>
-                                    <div class="ms-3">
-                                        <h6 class="mb-0 fs-sm">Special title treatment</h6>
-                                        <span class="text-muted fs-sm">September 14, 2022</span>
-                                    </div>
-                                    <button class="btn text-muted ms-auto" type="btn"><i
-                                            class="fas fa-ellipsis-v"></i></button>
-                                </div>
-                                <div class="card-body">
-                                    With supporting text below as a natural lead-in to additional content.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-header d-flex align-items-center border-bottom">
-                                    <span class="avatar text-bg-primary avatar-lg fs-5">R</span>
-                                    <div class="ms-3">
-                                        <h6 class="mb-0 fs-sm">Special title treatment</h6>
-                                        <span class="text-muted fs-sm">September 14, 2022</span>
-                                    </div>
-                                    <button class="btn text-muted ms-auto" type="btn"><i
-                                            class="fas fa-ellipsis-v"></i></button>
-                                </div>
-                                <div class="card-body">
-                                    With supporting text below as a natural lead-in to additional content.
-                                </div>
-                            </div>
-                        </div>
-
+                        </select>
                     </div>
 
+                    <div class=" col">
+                        <label class="ms-2" for="floatingContactNumber">Contact Number</label>
+                        <input type="text" class="form-control" id="contactNumber" name="contactNumber" />
+
+                    </div>
+                </div>
+                <div class="input-group my-3 mt-5">
+                    <input type="file" class="form-control" id="imagePath" name="imagePath" accept="image/*"
+                        onchange="loadFile(event)">
+                    <label class="input-group-text" for="inputGroupFile02">Profile Picture</label>
+                </div>
+                <div class="text-center justify-content-center align-content-end">
+                    <img src="/img/default_profile.png" id="output" width="150" height="150"
+                        style="border-radius: 50%;" />
+                </div>
+                <div class="text-end">
+                    <button type="submit" class="btn btn-primary btnPostOwner" id="btnPostOwner">Submit</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <div class="card border-0 h-100 shadow-lg bg-white petownerbg mt-4">
+        <div class="card-body">
+            <div class="row">
+                <div class="table-responsive">
+                    <table class="table " id="petOwnerTable">
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Profile</th>
+                                <th>Name</th>
+                                <th>Contact Number</th>
+                                <th>baranggay</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                    </table>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-
-@* modal add Encoder POST *@
-<div class="modal fade" id="AddPetOwnersModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+@* Update *@
+<div class="modal fade" id="UpdatePetOwnerModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl">
-        <div class="modal-content">
-            <div class="px-3">
-                <div class="modal-header">
-                    <div class="align-content-start">
-                        <h5 class="modal-title title" id="staticBackdropLabel">Add Pet Owners
-                            <i class="bx bx-plus"></i>
-                        </h5>
-                    </div>
-                    <div class="bg-body-secondary p-2 btn-modal-close shadow">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <form id="UpdatepetOwnerForm" name="petOwnerForm" enctype="multipart/form-data">
+            <div class="modal-content">
+                <div class="px-3">
+                    <div class="modal-header">
+                        <div class="align-content-start">
+                            <h5 class="modal-title title" id="staticBackdropLabel">
+                                <div class="text-start justify-content-start align-items-center d-flex">
+                                    <img id="ownerImage" width="85" height="85" style="border-radius: 50%;" />
+                                    <h5 id="name" class="ms-5"> </h5>
+                                </div>
+
+                            </h5>
+                        </div>
+                        <div class="bg-body-secondary p-2 btn-modal-close shadow">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="modal-body">
-                <form id="petOwnerForm" name="petOwnerForm" enctype="multipart/form-data">
+                <div class="modal-body">
                     <div class="row">
-                        <div class="form-floating mb-3 col">
+                        @* <div class="text-start justify-content-start align-content-end">
+                        <img src="/img/default_profile.png" id="output" width="150" height="150"
+                        style="border-radius: 50%;" />
+                        </div> *@
+                        <div class=" mb-3 col">
+                            <label class="ms-2" for="floatingInput">First Name</label>
                             <input type="text" class="form-control" id="firstName" name="firstName"
                                 placeholder="name@example.com" />
-                            <label class="ms-2" for="floatingInput">First Name</label>
+
                         </div>
-                        <div class="form-floating col">
+                        <div class=" col">
+                            <label class="ms-2" for="floatingmiddleName">Middle Name</label>
+
                             <input type="text" class="form-control" id="middleName" name="middleName"
                                 placeholder="Password" />
-                            <label class="ms-2" for="floatingmiddleName">Middle Name</label>
                         </div>
-                        <div class="form-floating col">
+                        <div class=" col">
+                            <label class="ms-2" for="floatingPassword">Last Name</label>
+
                             <input type="text" class="form-control" id="lastName" name="lastName"
                                 placeholder="lastName" />
-                            <label class="ms-2" for="floatingPassword">Last Name</label>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="form-floating col">
+                        <div class=" col">
+                            <label class="ms-2" for="floatingSelect">Works with selects</label>
+
                             <select class="form-select" id="baranggayId" name="baranggayId"
                                 aria-label="Floating label select example">
                                 <option value=""> Select baranggay</option>
-                                <option value="7">One</option>
 
                             </select>
-                            <label class="ms-2" for="floatingSelect">Works with selects</label>
                         </div>
 
-                        <div class="form-floating col">
+                        <div class=" col">
+                            <label class="ms-2" for="floatingContactNumber">Contact Number</label>
+
                             <input type="text" class="form-control" id="contactNumber" name="contactNumber"
                                 placeholder="Password" />
-                            <label class="ms-2" for="floatingContactNumber">Contact Number</label>
                         </div>
                     </div>
                     <div class="input-group my-3">
@@ -251,22 +156,66 @@
                             onchange="loadFile(event)">
                         <label class="input-group-text" for="inputGroupFile02">Profile Picture</label>
                     </div>
+                    <input id="id" name="id" type="hidden" />
                     <div class="text-center justify-content-center align-content-end">
-                        <img src="/img/default_profile.png" id="output" width="300" height="300"
+                        <img src="/img/default_profile.png" id="output2" width="150" height="150"
                             style="border-radius: 50%;" />
                     </div>
                     <div class="text-end">
                         <button class="btn btn-default" type="button" data-bs-dismiss="modal"
                             aria-label="Close">Cancel</button>
-                        <button type="button" class="btn btn-primary " id="btnPostOwner">Submit</button>
+                        <button type="button" class="btn btn-primary " id="UpdatebtnPostOwner">Submit</button>
                     </div>
-                </form>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@* delete *@
+<div class="modal fade" id="deleteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+                    <form id="vaxDelete">
+                        <div class="p-5">
+                            <div class="d-flex justify-content-center ">
+                                <div class="m-0 p-0">
+                                    <div class=" icon_delete p-4">
+                                        <i class='bx bx-error icon-danger text-center fs-1 '></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <p class=" mt-2 mb-0 text-black fs-2 text-center fw-semibold">Are you sure?</p>
+                                <p class=" mb-0 delete-text text-center"> This action cannot be undone. All values
+                                    associated with
+                                    this fiels
+                                    will be
+                                    lost:
+                                </p>
+                                <p class=" my-2 fs-6 fw-semibold text-center text-black" id="deleteName">
+                                </p>
+                            </div>
+                            <input type="hidden" id="fullName" name="fullName" />
+                            <input type="hidden" id="id" name="id" />
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-danger deleteBtn" type="button">Delete field</button>
+                                <button class="btn btn-default " type="button" data-bs-dismiss="modal"
+                                    aria-label="Close">Cancel</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
 
         </div>
     </div>
 </div>
-
 
 @section scripts
 {
@@ -280,24 +229,69 @@
             reader.readAsDataURL(event.target.files[0]);
         };
 
-
+        var loadFile = function (event) {
+            var reader = new FileReader();
+            reader.onload = function () {
+                var output = document.getElementById('output2');
+                output.src = reader.result;
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        };
         $(document).ready(function () {
+
+            $.ajax({
+                type: "GET",
+                url: "/api/BaranggayApi/getBgy",
+                success: function (data) {
+                    $.each(data, function (index, value) {
+                        $("select[name=baranggayId]").append(
+                            '<option value="' + value.id + '">' + value.baranggayName + "</option>",
+                        );
+                    });
+                },
+            });
+
+            $('.bgyselect2').select2({
+                width: '100%',
+                theme: 'bootstrap-5'
+            });
+
             //saving with or without photo
-            $("#btnPostOwner").click(function (e) {
+            $("#petOwnerForm").submit(function (e) {
                 e.preventDefault();
-                var formData = new FormData(petOwnerForm);
+                var formData2 = new FormData(this);
                 $.ajax({
                     url: "/api/PetOwnerApi/PostPetOwner",
                     type: "POST",
-                    data: formData,
+                    data: formData2,
                     cache: false,
                     contentType: false,
                     processData: false,
                     success: function (data) {
-                        console.log("ok");
+                        new Noty({
+                            theme: "mint",
+                            text: "Successfully Save!",
+                            type: "info",
+                            layout: "topRight",
+                            timeout: 1500,
+                        }).show();
+                        setTimeout(function () {
+                            $("#AddPetOwnersModal").modal("hide");
+                            petOwnerTable.ajax.reload();
+                        }, 1300);
                     },
                     error: function (data) {
-                        console.log("error");
+                        new Noty({
+                            theme: "mint",
+                            text: "Something went wrong!",
+                            type: "error",
+                            layout: "topRight",
+                            timeout: 1500,
+                        }).show();
+                        setTimeout(function () {
+                            $("#AddPetOwnersModal").modal("hide");
+                            petOwnerTable.ajax.reload();
+                        }, 1300);
                     },
                 });
             });
@@ -313,34 +307,41 @@
                     {
                         // display count
                         data: null,
-                        className: "text-center",
+                        className: "text-center  fs-5",
                         render: function (data, type, row, meta) {
                             return meta.row + meta.settings._iDisplayStart + 1;
                         },
                     },
                     {
                         data: "imagePath",
-                        className: "text-center",
+                        className: "text-center  fs-5",
                         render: function (data, type, row) {
                             if (data == null) {
-                                return '<img src="/img/users.png" width="40" height="40"  style="border-radius: 50%;">';
+                                return '<img src="/img/users.png" class="avatar avatar-lg">';
                             }
                             else if (data != null) {
-                                return '<img src="' + data + '" width="40" height="40"   style="border-radius: 50%;">';
+                                return '<img src="' + data + '"  class="avatar avatar-lg">';
                             }
                         }
                     },
                     {
                         data: "null",
-                        className: "text-center",
+                        className: "text-center  fs-5",
                         render: function (data, type, row) {
                             return row.firstName + ' ' + row.middleName + ' ' + row.lastName;
                         }
                     },
                     {
-                        data: "dateAdded",
-                        className: "text-center",
+                        data: "contactNumber",
+                        className: "text-center  fs-5",
+
                     },
+                    {
+                        data: "baranggay.baranggayName",
+                        className: "text-center  fs-5",
+
+                    },
+
                     {
                         data: null,
                         className: "text-center",
@@ -359,6 +360,128 @@
                 width: "240px",
             });
 
+
+            $("#petOwnerTable").on("click", ".edit", function () {
+                var id = $(this).attr("data-id");
+                $.ajax({
+                    type: "GET",
+                    url: "/api/PetOwnerApi/getPetOwnersbyId/" + id,
+                    success: function (data) {
+                        $("#UpdatePetOwnerModal").modal("show");
+                        $("#UpdatepetOwnerForm").find("input[name=id]").val(data.id);
+                        $("#UpdatepetOwnerForm").find("select[name=baranggayId]").val(data.baranggayId);
+                        $("#UpdatepetOwnerForm").find("input[name=firstName]").val(data.firstName);
+                        $("#UpdatepetOwnerForm").find("input[name=middleName]").val(data.middleName);
+                        $("#UpdatepetOwnerForm").find("input[name=lastName]").val(data.lastName);
+                        $("#UpdatepetOwnerForm").find("input[name=contactNumber]").val(data.contactNumber);
+                        $("#UpdatepetOwnerForm").find("#name").text(data.firstName + " " + data.middleName + " " + data.lastName);
+                        if (data.imagePath == null) {
+                            $("#UpdatepetOwnerForm").find("#ownerImage").attr("src", "/img/users.png");
+                        }
+                        else {
+                            $("#UpdatepetOwnerForm").find("#ownerImage").attr("src", "" + data.imagePath);
+
+                        }
+
+                    },
+                });
+            });
+            //saving with or without photo
+            $("#UpdatebtnPostOwner").click(function (e) {
+                e.preventDefault();
+                var id = $("#UpdatepetOwnerForm").find("input[name=id]").val();
+                var formData = new FormData(UpdatepetOwnerForm);
+                $.ajax({
+                    url: "/api/PetOwnerApi/putPetOwners/" + id,
+                    type: "PUT",
+                    data: formData,
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    success: function (data) {
+                        new Noty({
+                            theme: "mint",
+                            text: "Successfully Save!",
+                            type: "info",
+                            layout: "topRight",
+                            timeout: 1500,
+                        }).show();
+                        setTimeout(function () {
+                            $("#UpdatePetOwnerModal").modal("hide");
+                            petOwnerTable.ajax.reload();
+                        }, 1300);
+                    },
+                    error: function (data) {
+                        new Noty({
+                            theme: "mint",
+                            text: "Something went wrong!",
+                            type: "error",
+                            layout: "topRight",
+                            timeout: 1500,
+                        }).show();
+                        setTimeout(function () {
+                            $("#UpdatePetOwnerModal").modal("hide");
+                            petOwnerTable.ajax.reload();
+                        }, 1300);
+                    },
+                });
+            });
+
+            //GET BY ID FOR DELETE
+            $("#petOwnerTable").on("click", ".delete", function () {
+                var id = $(this).attr("data-id");
+                $.ajax({
+                    type: "GET",
+                    url: "/api/PetOwnerApi/getPetOwnersbyId/" + id,
+                    success: function (data) {
+                        $("#deleteModal").modal("show");
+                        $("#vaxDelete").find("input[name=id]").val(data.id);
+                        $("#vaxDelete").find("input[name=fullName]").val(data.firstName + " " + data.middleName + " " + data.lastName);
+                        var Ename = $("#vaxDelete").find("input[name=fullName]").attr("value");
+                        console.log(JSON.stringify(Ename));
+                        $("#deleteName").text(Ename);
+                    },
+                });
+            });
+
+            //DELETE
+            $("#deleteModal").on("click", ".deleteBtn", function () {
+                var id = $("#vaxDelete").find("input[name=id]").val();
+                var valdatas = {
+                    id: id,
+                };
+                $.ajax({
+                    type: "DELETE",
+                    url: "/api/PetOwnerApi/deletedata/" + id,
+                    data: valdatas,
+                    success: function (data) {
+                        new Noty({
+                            theme: "mint",
+                            text: "Successfully Delete field!",
+                            type: "info",
+                            layout: "topRight",
+                            timeout: 1500,
+                        }).show();
+                        setTimeout(function () {
+                            $("#deleteModal").modal("hide");
+                            petOwnerTable.ajax.reload();
+                        }, 1300);
+                    },
+                    error: function (data) {
+                        new Noty({
+                            theme: "mint",
+                            text: "Something went wrong",
+                            type: "info/information",
+                            layout: "topRight",
+                            timeout: 1500,
+                        }).show();
+                        setTimeout(function () {
+                            $("#deleteModal").modal("hide");
+                            petOwnerTable.ajax.reload();
+                        }, 1300);
+                    },
+                });
+            });
         }); 
     </script>
 }

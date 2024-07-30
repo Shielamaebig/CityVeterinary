@@ -14,22 +14,16 @@ namespace CityVeterinary.Models
         public int PetInformationId { get; set; }
         public virtual PetInformation? PetInformation { get; set; }
         public string? PetName { get; set; }
-        public string? BreedType { get; set; }
-        public string? PetType { get; set; }
-        public string? Gender { get; set; }
         public string? Powner { get; set; }
-
         public int? PetOwn { get; set; }
 
-
-        public string? DateVaxStart { get; set; }
-        public string? DateVaxEnd { get; set; }
+        public string? DateVaccinated { get; set; }
+        public string? DueDateVaccinated { get; set; }
 
         //Vaccine
         public int? VaccineId { get; set; }
         public virtual Vaccine? Vaccine { get; set; }
         public string? VaccineName { get; set; }
-
 
         // Veterinarian
         public int? VeterinarianId { get; set; }
@@ -42,9 +36,10 @@ namespace CityVeterinary.Models
         public string? VaccinatorName { get; set; }
 
         //SERVICES
-        public int ServicesId { get; set; }
+        public int? ServicesId { get; set; }
         public virtual Services? Services { get; set; }
         public string? ServiceName { get; set; }
 
+        public string? AddedBy { get; set; }
     }
 }

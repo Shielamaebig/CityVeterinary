@@ -15,7 +15,10 @@ namespace CityVeterinary.Models
         public string? ContactNumber { get; set; }
         public int BaranggayId { get; set; }
         public virtual Baranggay? Baranggay { get; set; }
+        public string? BaranggayName { get; set; }
         public string? FileExtension { get; set; }
         public string? ImagePath { get; set; }
+        public string? AddedBy { get; set; }
+
     }
 }

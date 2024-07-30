@@ -159,14 +159,14 @@ aside {
 
 
 aside li a:hover {
-    background-color: rgb(150, 150, 150);
+    background-color: rgb(233, 233, 233);
   }
-aside li a:hover .icon{
+/* aside li a:hover .icon{
     color: #ffffff
 }
 aside li a:hover .text {
     color: #ffffff
-  }
+} */
 aside li a {
     height: 100%;
     width: 100%;

@@ -87,7 +87,7 @@ namespace CityVeterinary.Controllers.Api
         }
 
         [HttpDelete]
-        [Route("deleteType/{id}")]
+        [Route("deleteType")]
         public async Task<ActionResult> DeleteType(int id)
         {
             var deletePet = await _db.PetTypes.SingleOrDefaultAsync(x => x.Id == id);

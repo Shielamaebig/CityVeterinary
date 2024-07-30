@@ -16,12 +16,12 @@ namespace CityVeterinary.DataContext
         public DbSet<PetType> PetTypes => Set<PetType>();
         public DbSet<BreedType> BreedTypes => Set<BreedType>();
         public DbSet<PetInformation> PetInformations => Set<PetInformation>();
-        public DbSet<PetVaccine> PetVaccines => Set<PetVaccine>();
         public DbSet<Veterinarian> Veterinarians => Set<Veterinarian>();
         public DbSet<Vaccine> Vaccines => Set<Vaccine>();
         public DbSet<RecentActivity> RecentActivities => Set<RecentActivity>();
         public DbSet<Vaccinator> Vaccinators => Set<Vaccinator>();
         public DbSet<Appointment> Appointments => Set<Appointment>();
         public DbSet<Services> Services => Set<Services>();
+        public DbSet<PetVaccine> PetVaccines => Set<PetVaccine>();
     }
 }

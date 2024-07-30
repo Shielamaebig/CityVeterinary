@@ -160,8 +160,17 @@ namespace CityVeterinary.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("AddedBy")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("BreedTypeId")
                         .HasColumnType("int");
+
+                    b.Property<string>("BreedTypeName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DateAdded")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("DateOfBirth")
                         .HasColumnType("nvarchar(max)");
@@ -169,7 +178,13 @@ namespace CityVeterinary.Migrations
                     b.Property<string>("DateRegister")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("FileExtension")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Gender")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImagePath")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Markings")
@@ -181,11 +196,17 @@ namespace CityVeterinary.Migrations
                     b.Property<string>("PetName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("PetOwnerId")
+                    b.Property<int?>("PetOwnerId")
                         .HasColumnType("int");
+
+                    b.Property<string>("PetOwnerName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("PetTypeId")
                         .HasColumnType("int");
+
+                    b.Property<string>("PetTypeName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Species")
                         .HasColumnType("nvarchar(max)");
@@ -212,8 +233,14 @@ namespace CityVeterinary.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("AddedBy")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("BaranggayId")
                         .HasColumnType("int");
+
+                    b.Property<string>("BaranggayName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ContactNumber")
                         .HasColumnType("nvarchar(max)");
@@ -270,19 +297,16 @@ namespace CityVeterinary.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("BreedType")
+                    b.Property<string>("AddedBy")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("DateAdded")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("DateVaxEnd")
+                    b.Property<string>("DateVaccinated")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("DateVaxStart")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Gender")
+                    b.Property<string>("DueDateVaccinated")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("PetInformationId")
@@ -294,16 +318,13 @@ namespace CityVeterinary.Migrations
                     b.Property<int?>("PetOwn")
                         .HasColumnType("int");
 
-                    b.Property<string>("PetType")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Powner")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ServiceName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("ServicesId")
+                    b.Property<int?>("ServicesId")
                         .HasColumnType("int");
 
                     b.Property<int?>("VaccinatorId")
@@ -489,9 +510,7 @@ namespace CityVeterinary.Migrations
 
                     b.HasOne("CityVeterinary.Models.PetOwner", "PetOwner")
                         .WithMany()
-                        .HasForeignKey("PetOwnerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("PetOwnerId");
 
                     b.HasOne("CityVeterinary.Models.PetType", "PetType")
                         .WithMany()
@@ -525,9 +544,7 @@ namespace CityVeterinary.Migrations
 
                     b.HasOne("CityVeterinary.Models.Services", "Services")
                         .WithMany()
-                        .HasForeignKey("ServicesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ServicesId");
 
                     b.HasOne("CityVeterinary.Models.Vaccinator", "Vaccinator")
                         .WithMany()

@@ -231,7 +231,7 @@
   --ds-border-accent-gray: #758195;
   --ds-border-disabled: rgba(9, 30, 66, 0.06);
   --ds-border-focused: #388bff;
-  --ds-border-input: rgba(9, 30, 66, 0.14);
+  --ds-border-input: #aaa;
   --ds-border-inverse: #ffffff;
   --ds-border-selected: #0c66e4;
   --ds-border-brand: #0c66e4;
@@ -2932,6 +2932,8 @@ progress {
   display: block;
   width: 100%;
   padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+  padding-right: 5px;
+  padding-left: 10px;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.4285714286;
@@ -2945,7 +2947,7 @@ progress {
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
   background-size: 14px 10px;
-  border: 2px solid var(--ds-border-input);
+  border: 1px solid var(--ds-border-input);
   border-radius: 0.25rem;
   transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 }
@@ -3015,7 +3017,7 @@ progress {
 .form-control {
   display: block;
   width: 100%;
-  padding: 0.375rem 0.75rem;
+  padding: 0.4rem 0.45rem;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.4285714286;
@@ -3025,8 +3027,8 @@ progress {
   appearance: none;
   background-color: var(--ds-background-input);
   background-clip: padding-box;
-  border: 2px solid var(--ds-border-input);
-  border-radius: 0.5rem;
+  border: 1px solid var(--ds-border-input);
+  border-radius: 4px;
   transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -4021,7 +4023,7 @@ textarea.form-control.is-invalid {
   text-align: center;
   white-space: nowrap;
   background-color: var(--ds-background-neutral);
-  border: 2px solid var(--ds-border-input);
+  border: 1px solid var(--ds-border-input);
   border-radius: 0.25rem;
 }
 .input-group-lg > .btn,

@@ -14,7 +14,10 @@ namespace CityVeterinary.Controllers
         {
             return View();
         }
-
+        public IActionResult PetAndOwnerAdd()
+        {
+            return View();
+        }
        
     }
 }

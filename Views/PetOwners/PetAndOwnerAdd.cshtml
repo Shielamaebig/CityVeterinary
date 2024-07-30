@@ -1,0 +1,582 @@
+@{
+    ViewData["Title"] = "PetAndOwnerAdd";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class=" mt-3 pb-4">
+    <div class="card border-0 h-100 shadow-lg encoder-bg">
+        <div class="card-body">
+            <div class=" justify-content-between mx-4 my-3 align-content-center">
+                <h2 class="text-discovery fw-semibold mt-2 text-center">PET SERVICES</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="card border-0 h-100 shadow-lg bg-white  mt-4">
+        <div class="card-body">
+            <form id="petOwnerForm" name="petOwnerForm">
+                <div class="row">
+                    <h5 class="mt-2">Pet Info</h5>
+                    <label class="ms-2" for=" ">Select Pet Owner</label>
+
+                    <div class=" col-12 ">
+                        <select class="form-select ownerId col-12" id="ownerId" name="ownerId"
+                            aria-label="Floating label select example">
+                            <option value=""> Select Pet & Owner</option>
+
+                        </select>
+                    </div>
+                    <div class="col mt-2">
+                        <label class="ms-2" for=" ">Name</label>
+                        <input type="text" class="form-control" id="petName" name="petName" readonly />
+
+                    </div>
+                    <div class=" col mt-2">
+                        <label class="ms-2" for=" ">Gender</label>
+
+                        <input type="text" class="form-control" id="gender" name="gender" readonly />
+                    </div>
+                    <div class=" col mt-2">
+                        <label class="ms-2" for=" ">Type</label>
+
+                        <input type="text" class="form-control" id="petTypeName" name="petTypeName" readonly />
+                    </div>
+                    <div class=" col mt-2">
+                        <label class="ms-2" for=" ">Breed</label>
+                        <input type="text" class="form-control" id="breedTypeName" name="breedTypeName" readonly />
+                    </div>
+                    <div class=" col mt-2">
+                        <label class="ms-2" for="floating ContactNumber">Markings</label>
+
+                        <input type="text" class="form-control" id="markings" name="markings" readonly />
+                    </div>
+                </div>
+
+                <div class="row mt-2">
+                    <div class=" col">
+                        <label class="ms-2" for=" ">Species</label>
+
+                        <input type="text" class="form-control" id="species" name="species" readonly />
+                    </div>
+                    <div class=" col">
+                        <label class="ms-2" for=" ">Date Of Birth</label>
+
+                        <input type="text" class="form-control" id="dateOfBirth" name="dateOfBirth" readonly />
+                    </div>
+
+                </div>
+
+                <h5 class="mt-3">Pet Owner</h5>
+
+                <div class="row">
+
+                    <div class="col">
+                        <label class="ms-2" for=" ">First Name</label>
+
+                        <input type="text" class="form-control" id="firstName" name="firstName" readonly />
+                    </div>
+                    <div class=" col">
+                        <label class="ms-2" for="floatingmiddleName">Middle Name</label>
+
+                        <input type="text" class="form-control" id="middleName" name="middleName" readonly />
+                    </div>
+                    <div class=" col">
+                        <label class="ms-2" for="floatingPassword">Last Name</label>
+
+                        <input type="text" class="form-control" id="lastName" name="lastName" readonly />
+                    </div>
+                </div>
+
+                <div class="row mt-2">
+                    <div class=" col">
+                        <label class="ms-2" for=" ">Select Barangay</label>
+
+                        <input type="text" class="form-control" id="baranggayId" name="baranggayId" readonly />
+                    </div>
+
+                    <div class=" col mb-2">
+                        <label class="ms-2" for="floatingContactNumber">Contact Number</label>
+
+                        <input type="text" class="form-control" id="contactNumber" name="contactNumber" readonly />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <h5 class="mt-2">Services</h5>
+
+                    <div class="col">
+                        <label class="ms-2" for=" ">Select Vaccine</label>
+                        <select class="form-select vaccineId" id="vaccineId" name="vaccineId"
+                            aria-label="Floating label select example">
+                            <option value=""> Select Vaccine</option>
+                        </select>
+                    </div>
+
+
+                </div>
+
+                <div class="row mt-2">
+
+
+
+                    <div class=" col">
+                        <label class="ms-2" for="floating">Manufacturer</label>
+
+                        <input type="text" class="form-control" id="manufacturer" name="manufacturer" placeholder="" />
+                    </div>
+                    <div class=" col">
+                        <label class="ms-2" for="floatingPassword">Lot Number</label>
+
+                        <input type="text" class="form-control" id="lotNumber" name="lotNumber" placeholder="" />
+                    </div>
+                    <div class=" col">
+                        <label class="ms-2" for="floatingPassword">Due Date</label>
+
+                        <input type="date" class="form-control" id="dueDateVaccinated" name="dueDateVaccinated"
+                            placeholder="" />
+                    </div>
+                </div>
+
+                <div class="row mt-2">
+                    <div class=" col">
+                        <label class="ms-2" for=" ">Select Vaccinator</label>
+
+                        <select class="form-select vaccinatorId" id="vaccinatorId" name="vaccinatorId"
+                            aria-label="Floating label select example">
+                            <option value=""> Select Vaccinator</option>
+
+                        </select>
+                    </div>
+
+                    <div class=" col">
+                        <label class="ms-2" for="floatingContactNumber">Select Veterinarian</label>
+
+                        <select class="form-control veterinaryId" id="veterinaryId" name="veterinaryId"
+                            aria-label="Floating label select example">
+                            <option value=""> Select Veterinarian</option>
+
+                        </select>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4">
+                    <button type="submit" class="btn btn-primary btn-lg btnPostOwner" id="btnPostOwner">Submit</button>
+                </div>
+
+
+            </form>
+
+        </div>
+    </div>
+</div>
+<div class="pb-10">
+    <div class="card border-0 h-100 shadow-lg bg-white petownerbg mt-2">
+        <div class="card-body">
+            <div class="row">
+                <div class="table-responsive">
+                    <table class="table " id="petInfoTable">
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                @* <th>Profile</th> *@
+                                <th>Pet Owner</th>
+                                <th>Pet Name</th>
+                                <th>ContactNumber</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@* modal add Encoder POST *@
+<div class="modal fade" id="AddPetOwnersModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="px-3">
+                <div class="modal-header">
+                    <div class="align-content-start">
+                        <h5 class="modal-title title" id="staticBackdropLabel">Add Pet
+                            <i class="bx bx-plus"></i>
+                        </h5>
+                    </div>
+                    <div class="bg-body-secondary p-2 btn-modal-close shadow">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <form id="petInfoForm" name="petInfoForm" enctype="multipart/form-data">
+                    <div class="row">
+
+                        <div class=" col mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Pet Owner</label>
+                            <select class="form-select" id="petOwnerId" name="petOwnerId"
+                                aria-label="Floating label select example" style="height: 30px;">
+
+                                <option value="-1" class="new">Select Value</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class=" mb-3 col">
+                            <input type="text" class="form-control" id="petName" name="petName"
+                                placeholder="name@example.com" />
+                            <label class="ms-2" for=" ">Name</label>
+                        </div>
+                        <div class=" col">
+                            <select class="form-select" id="gender" name="gender"
+                                aria-label="Floating label select example">
+                                <option value="Female">Female</option>
+                                <option value="Male">Male</option>
+                            </select>
+                            <label class="ms-2" for=" ">Gender</label>
+                        </div>
+                        <div class=" col">
+                            <select class="form-select" id="petTypeId" name="petTypeId"
+                                aria-label="Floating label select example">
+                                <option value=" ">Select Value</option>
+                            </select>
+                            <label class="ms-2" for=" ">Pet Type</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class=" col">
+                            <select class="form-select" id="breedTypeId" name="breedTypeId"
+                                aria-label="Floating label select example">
+                                <option value="">Select Value</option>
+                            </select>
+                            <label class="ms-2" for=" ">What breed</label>
+                        </div>
+                        <div class=" col">
+                            <input type="text" class="form-control" id="markings" name="markings"
+                                placeholder="Password" />
+                            <label class="ms-2" for="floatingContactNumber">Markings</label>
+                        </div>
+                        <div class=" col">
+                            <select class="form-select" id="species" name="species"
+                                aria-label="Floating label select example">
+                                <option value="Canine">Canine</option>
+                                <option value="Feline">Feline</option>
+                            </select>
+                            <label class="ms-2" for=" ">What is the species of pet?</label>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class=" mb-3 col">
+                            <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth"
+                                placeholder="name@example.com" />
+                            <label class="ms-2" for=" ">Date Of Birth</label>
+                        </div>
+                        <div class=" mb-3 col">
+                            <input type="text" class="form-control" id="tagNumber" name="tagNumber"
+                                placeholder="name@example.com" />
+                            <label class="ms-2" for=" ">Tag Number</label>
+                        </div>
+                        <div class=" mb-3 col">
+                            <input type="text" class="form-control" id="orNumber" name="orNumber"
+                                placeholder="name@example.com" />
+                            <label class="ms-2" for=" ">OR number</label>
+                        </div>
+                    </div>
+                    <div class="input-group my-3">
+                        <input type="file" class="form-control" id="imagePath" name="imagePath" accept="image/*"
+                            onchange="loadFile(event)">
+                        <label class="input-group-text" for="inputGroupFile02">Profile Picture</label>
+                    </div>
+                    <div class="text-center justify-content-center align-content-end">
+                        <img src="/img/default_profile.png" id="output" width="150" height="150"
+                            style="border-radius: 50%;" />
+                    </div>
+                    <div class="text-end">
+                        <button class="btn btn-default" type="button" data-bs-dismiss="modal"
+                            aria-label="Close">Cancel</button>
+                        <button type="submit" class="btn btn-primary btnPostOwner" id="btnPostInfo">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section scripts
+{
+    <script>
+
+        $(document).ready(function () {
+
+
+            $('.ownerId').select2({
+                width: '100%',
+                theme: 'bootstrap-5'
+
+            });
+
+            $.ajax({
+                type: "GET",
+                url: "/api/PetInfoApi/getPetInfo",
+                success: function (data) {
+                    $.each(data, function (index, value) {
+                        $("select[name=ownerId]").append(
+                            '<option value="' + value.id + '">' + value.petName + " | " + value.petOwner.firstName + " " + value.petOwner.middleName + " " + value.petOwner.lastName + "</option>",
+                        );
+                    });
+                },
+            });
+
+            $(".ownerId").on("change", function (e) {
+                var id = $(".ownerId option:selected").attr("value");
+                $.ajax({
+                    type: "GET",
+                    url: "/api/PetOwnerApi/getByOwnerId/" + id,
+                    success: function (data) {
+                        $("#petOwnerForm").find('input[name="petName"]').val(data.petName);
+                        $("#petOwnerForm").find('input[name="gender"]').val(data.gender);
+                        $("#petOwnerForm").find('input[name="markings"]').val(data.markings);
+                        $("#petOwnerForm").find('input[name="petTypeName"]').val(data.petType.petTypeName);
+                        $("#petOwnerForm").find('input[name="breedTypeName"]').val(data.breedType.breedName);
+                        $("#petOwnerForm").find('input[name="species"]').val(data.species);
+                        $("#petOwnerForm").find('input[name="dateOfBirth"]').val(data.dateOfBirth);
+                        $("#petOwnerForm").find('input[name="firstName"]').val(data.petOwner.firstName);
+                        $("#petOwnerForm").find('input[name="middleName"]').val(data.petOwner.middleName);
+                        $("#petOwnerForm").find('input[name="lastName"]').val(data.petOwner.lastName);
+                        $("#petOwnerForm").find('input[name="lastName"]').val(data.petOwner.lastName);
+
+                        $("#petOwnerForm").find('input[name="baranggayId"]').val(data.petOwner.baranggayName);
+                        $("#petOwnerForm").find('input[name="contactNumber"]').val(data.petOwner.contactNumber);
+
+
+                    },
+                    error: function (data) { },
+                });
+            });
+            $('.vaccineId').select2({
+                width: '100%'
+            });
+
+            $.ajax({
+                type: "GET",
+                url: "/api/VaccineApi/GetVaccines",
+                success: function (data) {
+                    $.each(data, function (index, value) {
+                        $("select[name=vaccineId]").append(
+                            '<option value="' + value.id + '">' + value.vaccineName + "</option>",
+                        );
+                    });
+                },
+            });
+
+            $(".vaccineId").on("change", function (e) {
+                var id = $(".vaccineId option:selected").attr("value");
+                $.ajax({
+                    type: "GET",
+                    url: "/api/PetOwnerApi/getByVax/" + id,
+                    success: function (data) {
+                        $("#petOwnerForm").find('input[name="manufacturer"]').val(data.manufacturer);
+                        $("#petOwnerForm").find('input[name="lotNumber"]').val(data.lotNumber);
+                    },
+                    error: function (data) { },
+                });
+            });
+
+            $('.vaccinatorId').select2({
+                width: '100%'
+            });
+
+            $.ajax({
+                type: "GET",
+                url: "/api/VaccinatorApi/getVaccinators",
+                success: function (data) {
+                    $.each(data, function (index, value) {
+                        $("select[name=vaccinatorId]").append(
+                            '<option value="' + value.id + '">' + value.fullName + "</option>",
+                        );
+                    });
+                },
+            });
+
+            $('.veterinaryId').select2({
+                width: '100%'
+            });
+
+            $.ajax({
+                type: "GET",
+                url: "/api/VeterinarianApi/getVeterinarians",
+                success: function (data) {
+                    $.each(data, function (index, value) {
+                        $("select[name=veterinaryId]").append(
+                            '<option value="' + value.id + '">' + value.vetName + "</option>",
+                        );
+                    });
+                },
+            });
+            var petInfoTable = $("#petInfoTable").DataTable({
+                ajax: {
+                    url: "/api/PetInfoApi/getPetInfo",
+                    dataSrc: "",
+                },
+                autoWidth: false,
+                pagingType: "simple_numbers",
+                columns: [
+                    {
+                        // display count
+                        data: null,
+                        className: "text-center fs-5",
+                        render: function (data, type, row, meta) {
+                            return meta.row + meta.settings._iDisplayStart + 1;
+                        },
+                    },
+                    //{
+                    //    data: "null",
+                    //    className: "text-center fs-5",
+                    //    render: function (data, type, row) {
+
+                    //        if (row == null) {
+                    //            return '<div class="avatar-stack d-flex align-items-center justify-content-center"> <img class="avatar avatar-lg" src="/img/users.png" /><img class="avatar avatar-lg" src="/img/users.png"/></div>';
+                    //        }
+                    //        else if (row != null) {
+                    //            return '<div class="avatar-stack d-flex align-items-center justify-content-center "> <img class="avatar avatar-lg" src="' + row.imagePath + '"  /><img class="avatar avatar-lg" src="' + row.petOwner.imagePath + '" /></div>';
+                    //        }
+
+                    //    }
+                    // },
+                    {
+                        data: "null",
+                        className: "text-center fs-5",
+                        render: function (data, type, row) {
+                            return row.petOwner.firstName + ' ' + row.petOwner.middleName + ' ' + row.petOwner.lastName;
+                        }
+                    },
+                    {
+                        data: "petName",
+                        className: "text-center fs-5",
+
+                    },
+                    {
+                        data: "petOwner.contactNumber",
+                        className: "text-center fs-5",
+
+                    },
+
+                    {
+                        data: null,
+                        className: "text-center",
+                        render: function (data, row) {
+                            return (
+                                '<button class="btn btn-info btn-sm inject me-1 " data-id="' +
+                                data.id +
+                                '"><i class="bx bxs-injection"></i></button>' +
+                                '<button class="btn btn-success btn-sm edit me-1 " data-id="' +
+                                data.id +
+                                '"><i class="bx bxs-edit"></i></button>' +
+                                '  <button class="btn btn-danger btn-sm delete" data-id="' +
+                                data.id +
+                                '"><i class="bx bx-trash" ></i> </button>'
+                            );
+                        },
+                    },
+                ],
+                width: "240px",
+            });
+
+
+            $("#petOwnerId").select2({
+                width: '100%',
+                dropdownParent: $('#AddPetOwnersModal .modal-content')
+            });
+
+            $.ajax({
+                type: "GET",
+                url: "/api/PetTypeApi/getPetTypes",
+
+                success: function (data) {
+                    var html = '<option value="">Select Value</option>';
+                    $.each(data, function (i, item) {
+                        html += '<option value="' + item.id + '">' + item.petTypeName + "</option>";
+                    });
+                    $("select[name=petTypeId]").html(html);
+                    // render divisionsId2 select
+                    $("select[name=petTypeId]").on("change", function () {
+                        var petTypeId = $("select[name=petTypeId]").val();
+                        $.ajax({
+                            type: "GET",
+                            url: "/api/BreedApi/getBreedbyType/" + petTypeId,
+                            headers: {
+                                Authorization: "Bearer " + localStorage.getItem("access_token"),
+                            },
+                            success: function (data) {
+                                var html = '<option value="">Select Value</option>';
+                                $.each(data, function (i, item) {
+                                    html +=
+                                        '<option value="' + item.id + '">' + item.breedName + "</option>";
+                                });
+                                $("select[name=breedTypeId]").html(html);
+                            },
+                        });
+                    });
+                },
+            });
+
+            $('.ownerselect2').select2();
+
+            $.ajax({
+                type: "GET",
+                url: "/api/PetOwnerApi/getPetOwners",
+                success: function (data) {
+                    $.each(data, function (index, value) {
+                        $("select[name=petOwnerId]").append(
+                            '<option value="' + value.id + '">' + value.firstName + " " + value.middleName + " " + value.lastName + "</option>",
+                        );
+                    });
+                },
+            });
+
+            //saving with or without photo
+            $("#petInfoForm").submit(function (e) {
+                e.preventDefault();
+                var formData2 = new FormData(this);
+                $.ajax({
+                    url: "/api/PetInfoApi/postPetInfo",
+                    type: "POST",
+                    data: formData2,
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    success: function (data) {
+                        new Noty({
+                            theme: "mint",
+                            text: "Successfully Save!",
+                            type: "info",
+                            layout: "topRight",
+                            timeout: 1500,
+                        }).show();
+                        setTimeout(function () {
+                            $("#UpdatePetInfoModal").modal("hide");
+                            petInfoTable.ajax.reload();
+                        }, 1300);
+                    },
+                    error: function (data) {
+                        new Noty({
+                            theme: "mint",
+                            text: "Something went wrong!",
+                            type: "error",
+                            layout: "topRight",
+                            timeout: 1500,
+                        }).show();
+                        setTimeout(function () {
+                            $("#UpdatePetInfoModal").modal("hide");
+                            petInfoTable.ajax.reload();
+                        }, 1300);
+
+                    },
+                });
+            });
+        }); 
+    </script>
+}
